@@ -26,10 +26,101 @@
       </div>
     </nav>
   </header>
-  <main class="inner-page-main">
 
-    <section class="inner-page-main__contacts contacts"></section>
-    <section class="inner-page-main__map"></section>
+  <main class="inner-page-main ">
+    <h1 class="inner-page-main__heading">Подбор программы</h1>
+
+    <form class="select-programs">
+      <p class="select-programs__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+      <fieldset class="select-programs__cat">
+        <legend class="visually-hidden">Данные кота</legend>
+        <p class="select-programs__cat-name">
+          <label class="select-programs__label" for="cat-name">Имя:*</label>
+          <input class="select-programs__input" id="cat-name"  name="cat-name" type="text" placeholder="Барсик">
+        </p>
+        <p class="select-programs__cat-weight">
+          <label class="select-programs__label" for="cat-weight">Вес (кг):*</label>
+          <input class="select-programs__input" id="cat-weight"  name="cat-weight" type="text" placeholder="7">
+        </p>
+        <p class="select-programs__cat-age">
+          <label class="select-programs__label" for="cat-age">Возраст (лет):</label>
+          <input class="select-programs__input" id="cat-age"  name="cat-age" type="text" placeholder="7">
+        </p>
+      </fieldset>
+
+      <fieldset class="select-programs__filter programs-filter">
+        <legend class="visually-hidden">Тип программы</legend>
+        <ul class="programs-filter__list">
+          <li class="programs-filter__item">
+            <input class="visually-hidden filter-input" type="radio" name="slim" id="slim" value="slim" checked>
+            <label class="select-programs__label" for="slim">Похудение</label>
+          </li>
+          <li class="programs-filter__item">
+            <input class="visually-hidden filter-input" type="radio" name="pro" id="pro" value="pro">
+            <label class="select-programs__label" for="pro">Набор массы</label>
+          </li>
+          <li class="programs-filter__item">
+            <input class="visually-hidden filter-input" type="radio" name="unknown" id="unknown" value="unknown">
+            <label class="select-programs__label" for="unknown">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="select-programs__user">
+        <legend class="select-programs__legend">Контактные данные (владельца кота)</legend>
+        <p class="select-programs__user-email">
+          <label class="select-programs__label" for="user-email">E-mail:*</label>
+          <input class="select-programs__input" id="user-email"  name="user-email"
+                 type="email" placeholder="kuklachev@gmail.com">
+        </p>
+        <p class="select-programs__user-phone">
+          <label class="select-programs__label" for="user-phone">Телефон:*</label>
+          <input class="select-programs__input" id="user-phone"  name="user-phone"
+                 type="tel" placeholder="8 (960) 900-60-90">
+        </p>
+      </fieldset>
+      <fieldset class="select-programs__message">
+        <legend class="select-programs__legend">Комментарий</legend>
+        <p class="message">
+          <label class="visually-hidden" for="user-message">Текст комментария:</label>
+          <textarea class="select-programs__textarea" id="user-message" name="user-message"
+                    placeholder="Расскажите обо всех повадках кота"></textarea>
+        </p>
+      </fieldset>
+      <fieldset class="select-programs__additionally additionally-filter">
+        <legend class="select-programs__legend">Дополнительно</legend>
+        <ul class="additionally-filter__list">
+          <li class="additionally-filter__item">
+            <input class="visually-hidden filter-input" type="checkbox" name="sweetener" id="sweetener" checked>
+            <label for="sweetener">Сахарозаменитель</label>
+          </li>
+          <li class="additionally-filter__item">
+            <input class="visually-hidden filter-input" type="checkbox" name="water" id="water">
+            <label for="water">Питьевая вода</label>
+          </li>
+          <li class="additionally-filter__item">
+            <input class="visually-hidden filter-input" type="checkbox" name="milk" id="milk">
+            <label for="milk">Молоко</label>
+          </li>
+          <li class="additionally-filter__item">
+            <input class="visually-hidden filter-input" type="checkbox" name="vitamins" id="vitamins">
+            <label for="vitamins">Витамины</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="select-programs__button">Отправить заявку</button>
+      <small class="select-programs__note">
+        <sup>*</sup> * — Обязательные поля
+      </small>
+    </form>
+
+    <section class="contacts inner-page-contacts">
+      <p class="for-dealers">приглашаем к сотрудничеству дилеров!</p>
+      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <a class="contacts__map" href="#">
+        <img src="#" width="320" height="400" alt="Мы на карте">
+      </a>
+    </section>
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo">
