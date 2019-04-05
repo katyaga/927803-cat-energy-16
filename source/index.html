@@ -110,27 +110,37 @@
         </tr>
       </table>
       <p class="example__cost">Затраты на питание: 15 000 руб.</p>
+
       <div class="example__slider">
         <ul class="example__list">
           <li class="example__item">
             <img src="#" width="311" height="232" alt="Фото кота до диеты">
           </li>
         </ul>
-        <form class="example__form">
-          <ul class="example__form-list">
-            <li class="example__form-item">
-              <label class="example__form-label" for="before">Было</label>
-              <input class="example__form-button" type="radio" name="before" id="before" value="before" checked>
-            </li>
-            <li class="example__form-item">
-              <input class="example__form-button" type="radio" name="before" id="after" value="after">
-              <label class="example__form-label" for="after">Стало</label>
-            </li>
-          </ul>
-        </form>
+
+        <div class="example__slide-switch">
+          <button class="example__button example__button" type="button">Было</button>
+          <div class="example__progressbar">
+            <span class="example__progressbar-scale"></span>
+          </div>
+          <button class="example__button" type="button">Стало</button>
+        </div>
+
+<!--        <form class="example__form">-->
+<!--          <ul class="example__form-list">-->
+<!--            <li class="example__form-item">-->
+<!--              <label class="example__form-label" for="before">Было</label>-->
+<!--              <input class="example__form-button" type="radio" name="before" id="before" value="before" checked>-->
+<!--            </li>-->
+<!--            <li class="example__form-item">-->
+<!--              <input class="example__form-button" type="radio" name="before" id="after" value="after">-->
+<!--              <label class="example__form-label" for="after">Стало</label>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </form>-->
       </div>
     </section>
-    <section class="contacts page-main-contacts">
+    <section class="contacts page-main__contacts">
       <p class="contacts__for-dealers">приглашаем к сотрудничеству дилеров!</p>
       <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <a class="contacts__map" href="#">
