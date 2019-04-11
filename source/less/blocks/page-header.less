@@ -1,1 +1,30 @@
-// page header
+.page-header {
+
+}
+
+.page-header__wrapper {
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.page-header__logo {
+  display: block;
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    min-height: 110px;
+    width: 710px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+
+}

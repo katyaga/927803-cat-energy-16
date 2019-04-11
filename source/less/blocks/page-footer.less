@@ -1,11 +1,21 @@
 .page-footer {
+  min-height: 236px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: @color-grey-back;
 }
 
-.social__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.page-footer__logo {
+  margin: 0 auto;
+  min-height: 94px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-footer__copyright-link {
@@ -13,4 +23,11 @@
   line-height: 16px;
   color: @color-greyish-brown;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    min-height: 150px;
+    flex-direction: row;
+  }
 }
