@@ -1,6 +1,6 @@
 .banner {
+  position: relative;
   min-height: 480px;
-  margin: 0 auto;
   font-family: "OswaldRegular", "Arial", sans-serif;
   color: @color-white;
 }
@@ -10,6 +10,7 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
+  margin-bottom: 15px;
 }
 
 .banner__slogan {
@@ -18,26 +19,41 @@
   text-transform: uppercase;
 }
 
+.banner .container {
+  min-height: 480px;
+  padding-top: 30px;
+}
+
 .banner__back {
-  height: 305px;
-  margin-top: -90px;
-  background-color: @color-green;
+  min-height: 305px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: @color-back-green;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.banner__image {
-  margin: -138px auto 3px;
-  display: block;
-  width: 280px;
-  min-height: 270px;
-  background-color: #ff9f2f;
-}
+//.banner__image {
+//  margin: -138px auto 3px;
+//  display: block;
+//  width: 280px;
+//  min-height: 270px;
+//  background-color: #ff9f2f;
+//}
 
 .banner__button {
-  margin: 0 auto;
+  margin-top: auto;
   width: 280px;
+}
+
+@media (min-width: @tablet-width) and (max-width: 1299px) {
+  .banner__back {
+    background: @color-white;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -46,58 +62,43 @@
     color: @color-black-two;
   }
 
-  .banner__back {
-    margin: 0;
-    height: 0;
-  }
-
-  .banner__image {
-    margin-top: 20px;
-    width: 709px;
-    min-height: 609px;
-  }
-
-  .banner__wrapper {
-    width: 710px;
-    margin: 0 auto;
-  }
+  //.banner__image {
+  //  margin-top: 20px;
+  //  width: 709px;
+  //  min-height: 609px;
+  //}
 
   .banner__heading {
     margin-left: 90px;
+    margin-bottom: 30px;
   }
 
   .banner__slogan {
     margin-left: 90px;
+    margin-bottom: 20px;
   }
 
   .banner__button {
     z-index: 100;
-    margin-top: -580px;
-    margin-left: 90px;
+    margin: 0 90px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner__back {
-    width: 720px;
-    margin: 0;
+    left: 50%;
     height: 696px;
+    //background-color: @color-white;
     background-image: url("../img/index-background-desktop@1x.jpg");
-    margin-top: -165px;
-    margin-left: 610px;
+    background-position: left;
   }
 
-  .banner__wrapper {
-    width: 1220px;
-    margin: 0 auto;
-  }
-
-  .banner__image {
-    margin-top: -550px;
-    margin-left: 450px;
-    width: 552px;
-    min-height: 499px;
-  }
+  //.banner__image {
+  //  margin-top: -550px;
+  //  margin-left: 450px;
+  //  width: 552px;
+  //  min-height: 499px;
+  //}
 
   .banner__button {
     margin-top: -450px;
