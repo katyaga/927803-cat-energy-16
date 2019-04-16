@@ -1,6 +1,8 @@
 .banner {
   position: relative;
   min-height: 480px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
   font-family: "OswaldRegular", "Arial", sans-serif;
   color: @color-white;
 }
@@ -27,7 +29,7 @@
 }
 
 .banner .container {
-  min-height: 480px;
+  min-height: 440px;
 }
 
 .banner__back {
@@ -46,12 +48,16 @@
 .banner__image {
   width: 280px;
   min-height: 270px;
+  display: block;
   background-color: #ff9f2f;
 }
 
 .banner__button {
-  order: 10;
-  margin-top: auto;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  //order: 10;
+  //margin-top: auto;
   width: 280px;
 }
 
@@ -64,20 +70,20 @@
 @media (min-width: @tablet-width) {
   .banner {
     min-height: 840px;
+    padding-bottom: 0;
     color: @color-black-two;
   }
 
   .banner__image {
     width: 709px;
     min-height: 609px;
+    margin-top: -10px;
   }
 
   .banner__text {
+    margin-left: 90px;
     text-align: left;
-  }
-
-  .banner .container {
-    padding-left: 90px;
+    margin-bottom: 15px;
   }
 
   .banner__heading {
@@ -85,8 +91,8 @@
   }
 
   .banner__button {
-    order: 0;
-    margin: 0;
+    //position: static;
+    bottom: 580px;
     width: 245px;
   }
 }
@@ -95,6 +101,7 @@
   .banner {
     min-height: 554px;
     margin-bottom: 80px;
+    padding-bottom: 0;
   }
 
   .banner__back {
@@ -106,17 +113,25 @@
   }
 
   .banner .container {
-    padding-left: 80px;
+    display: flex;
+    //padding-left: 80px;
   }
 
   .banner__text {
-    margin: 80px 0 50px 0;
+    width: 410px;
+    margin: 80px 0 50px 80px;
+  }
+
+  .banner__button {
+    position: static;
+    margin-top: 50px;
   }
 
   .banner__image {
-    position: absolute;
-    left: 39%;
+    //position: absolute;
+    //left: 39%;
     width: 552px;
     min-height: 499px;
+    margin-left: -40px;
   }
 }
