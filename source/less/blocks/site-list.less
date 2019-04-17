@@ -1,7 +1,7 @@
 .site-list {
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   font-family: "OswaldMedium", "Arial", sans-serif;
@@ -10,6 +10,13 @@
   text-transform: uppercase;
   background-color: @color-white;
   list-style: none;
+}
+
+.site-list__item {
+  min-height: 66px;
+  line-height: 65px;
+  border-bottom: 1px solid @color-black;
+  text-align: center;
 }
 
 .site-list__item a {
