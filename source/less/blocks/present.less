@@ -1,5 +1,11 @@
 .present {
+  width: 280px;
+  min-height: 289px;
+  //margin-top: 39px;
+  //margin-bottom: 35px;
+  padding: 190px 60px 40px;
   font-size: 16px;
+  text-align: center;
   line-height: 20px;
   color: @color-white;
 
@@ -11,4 +17,27 @@
 
 .present__text {
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    width: 708px;
+    min-height: 200px;
+    text-align: left;
+    margin-top: 69px;
+    padding: 70px 125px 65px 420px;
+  }
+
+  .present__text {
+    width: 160px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .present {
+    margin: 0;
+    padding: 190px 40px 40px;
+    width: 245px;
+    min-height: 289px;
+  }
 }

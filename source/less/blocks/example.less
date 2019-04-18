@@ -1,13 +1,32 @@
 .example {
+  min-height: 705px;
   background-color: @color-grey-back;
 }
 
-.example__title {
-  margin: 0;
+.example .container {
+  padding-top: 30px;
 }
 
 .example__text {
+  width: 266px;
   margin: 0;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.example__table {
+  width: 100%;
+}
+
+.example__table tbody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__table tr {
+  width: 124px;
+  margin-bottom: 25px;
+  //display: block;
 }
 
 .example__table-field {
@@ -31,7 +50,7 @@
   font-family: "OswaldRegular", "Arial", sans-serif;
   line-height: 20px;
   color: @color-black-two;
-
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -39,6 +58,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  min-height: 232px;
+  background-color: burlywood;
 }
 
 .example__button {
@@ -48,4 +69,89 @@
   color: @color-black-two;
 
   text-transform: uppercase;
+}
+
+.example__slider {
+  margin-top: 30px;
+}
+
+.example__slide-switch {
+  margin: 35px auto 30px;
+  width: 280px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  //margin-top: 35px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    min-height: 1081px;
+    background-color: @color-white;
+  }
+
+  .example .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: 50px;
+    min-height: 619px;
+  }
+
+  .example__text {
+    width: 674px;
+    margin-top: 60px;
+    margin-bottom: 55px;
+  }
+
+  .example__list {
+    //width: 700px;
+    //min-height: 499px;
+    //margin-top: -151px;
+    //z-index: 2;
+  }
+
+  .example__slide-switch {
+    width: 708px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .example__table {
+    width: 366px;
+  }
+
+  .example__table tr {
+    width: 162px;
+  }
+
+  .example__cost {
+    margin-left: auto;
+    width: 174px;
+    text-align: right;
+  }
+
+  .example__slider {
+    margin-top: 0;
+    min-height: 462px;
+    background-color: @color-grey-back;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    min-height: 462px;
+    display: flex;
+  }
+
+  .example .container {
+    min-height: 462px;
+    width: 50%;
+  }
+
+  .example__slider {
+    min-height: 462px;
+    width: 50%;
+  }
 }

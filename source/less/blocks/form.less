@@ -4,10 +4,26 @@
   border: none;
 }
 
+.form__fieldset:not(:first-child) {
+  margin-bottom: 27px;
+}
+
+.form__fieldset:first-child {
+  padding: 23px 0;
+}
+
 .form__fields-list {
+  min-height: 158px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.form__fieldset:nth-child(2) .form__fields-list {
+  padding: 20px 0;
 }
 
 .form__legend {
@@ -17,7 +33,21 @@
   color: @color-black-two;
 }
 
+.form__fieldset:first-child .form__field:not(:last-child),
+.form__fieldset:nth-child(3) .form__field:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.form__fieldset .form__legend {
+  //padding-top: 27px;
+  margin-bottom: 27px;
+}
+
 .form__field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   font-size: 16px;
   color: @color-black;
@@ -25,23 +55,39 @@
   text-transform: uppercase;
 }
 
+.form__label {
+  //margin-right: 15px;
+}
+
 .form__input {
+  flex-grow: 1;
+  margin-left: 15px;
+  min-height: 45px;
+  padding-left: 15px;
+  padding-right: 40px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: @color-greyish-brown;
+  border: 1px solid @color-grey-border;
 
   &::placeholder {
     font-family: "OswaldRegular", "Arial", sans-serif;
     font-size: 16px;
     color: @color-greyish-brown;
+    text-transform: uppercase;
   }
 }
 
 .form__textarea {
+  width: 280px;
+  padding: 15px;
+  min-height: 150px;
   font-size: 16px;
   line-height: 18px;
   color: @color-greyish-brown;
+  border-color: @color-grey-border;
+  text-transform: uppercase;
 
   &::placeholder {
     font-family: "OswaldRegular", "Arial", sans-serif;
@@ -51,11 +97,30 @@
 }
 
 .form__button {
+  min-height: 40px;
+  margin-bottom: 20px;
+  width: 100%;
   font-size: 16px;
   line-height: 20px;
 }
 
 .form__note {
+  margin-left: 60px;
   font-size: 14px;
   line-height: 16px;
 }
+
+@media (min-width: @tablet-width) {
+  .form__input {
+    min-height: 52px;
+  }
+
+  .form__fieldset:first-child .form__field:not(:last-child),
+  .form__fieldset:nth-child(3) .form__field:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+//@media (min-width: @desktop-width) {
+//
+//}

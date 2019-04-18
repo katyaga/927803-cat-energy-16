@@ -1,9 +1,9 @@
 .select-programs {
+  margin: 30px 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
 }
 
 .select-programs__heading {
-  margin: 0;
   font-size: 36px;
   line-height: 60px;
   color: @color-black-two;
@@ -11,6 +11,24 @@
 
 .select-programs__text {
   margin: 0;
+  margin-top: 30px;
+  margin-bottom: 12px;
   text-transform: uppercase;
   color: @color-black-two;
 }
+
+@media (min-width: @tablet-width) {
+  .select-programs__text {
+    margin-left: 39px;
+    margin-bottom: 40px;
+    width: 320px;
+  }
+
+  .select-programs__form {
+    padding: 0 35px 0 39px;
+  }
+}
+
+//@media (min-width: @desktop-width) {
+//
+//}

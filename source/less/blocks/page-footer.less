@@ -1,21 +1,25 @@
 .page-footer {
-  min-height: 236px;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   background-color: @color-grey-back;
 }
 
+.page-footer .container {
+  min-height: 236px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .page-footer__logo {
-  margin: 0 auto;
-  min-height: 94px;
+  display: block;
+  //padding-top: 39px;
+  height: 24px;
 }
 
 .page-footer__copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .page-footer__copyright-link {
@@ -28,6 +32,9 @@
 @media (min-width: @tablet-width) {
   .page-footer {
     min-height: 150px;
+  }
+
+  .page-footer .container {
     flex-direction: row;
   }
 }

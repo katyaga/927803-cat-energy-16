@@ -3,12 +3,14 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .programs__item {
   min-height: 266px;
   margin-bottom: 20px;
+  padding: 35px 20px 20px 20px;
   background-color: @color-grey-back;
 }
 
@@ -35,19 +37,29 @@
 }
 
 @media (min-width: @tablet-width) {
+  .programs {
+    margin-bottom: 20px;
+  }
+
   .programs__item {
     min-height: 372px;
     margin-bottom: 30px;
+    padding-top: 80px;
+    padding-left: 50px;
+    padding-bottom: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .programs__list {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .programs__item {
     width: 570px;
+    margin-left: 0;
+    margin-bottom: 30px;
   }
 
   .programs__item:first-child {
