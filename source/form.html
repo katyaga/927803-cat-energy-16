@@ -76,6 +76,7 @@
 
           <fieldset class="form__fieldset">
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <div>
             <p class="form__field">
               <label class="form__label" for="user-email">E-mail:*</label>
               <input class="form__input form__input--email" id="user-email"  name="user-email"
@@ -86,6 +87,7 @@
               <input class="form__input form__input--phone" id="user-phone"  name="user-phone"
                       type="tel" placeholder="8 (960) 900-60-90">
             </p>
+            </div>
           </fieldset>
           <fieldset class="form__fieldset">
             <legend class="form__legend">Комментарий</legend>
@@ -116,10 +118,12 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form__button button">Отправить заявку</button>
-          <small class="form__note">
-            <sup>*</sup> * — Обязательные поля
-          </small>
+          <div class="form__bottom">
+            <button class="form__button button">Отправить заявку</button>
+            <small class="form__note">
+              <sup>*</sup> * — Обязательные поля
+            </small>
+          </div>
         </form>
       </section>
     </div>

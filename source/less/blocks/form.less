@@ -115,12 +115,120 @@
     min-height: 52px;
   }
 
+  .form__fieldset:not(:first-child) {
+    margin-bottom: 70px;
+  }
+
+  .form__fieldset:first-child {
+    margin-bottom: 50px;
+  }
+
   .form__fieldset:first-child .form__field:not(:last-child),
   .form__fieldset:nth-child(3) .form__field:not(:last-child) {
     margin-bottom: 20px;
   }
+
+  .form__fieldset:nth-child(2) .form__fields-list {
+    min-height: 196px;
+    border: 1px solid @color-grey-border;
+    padding-left: 88px;
+    //margin-bottom: 75px;
+  }
+
+  .form__fieldset:nth-child(3) .form__legend,
+  .form__fieldset:nth-child(4) .form__legend {
+    //padding-top: 27px;
+    margin-bottom: 65px;
+  }
+
+  .form__fieldset:nth-child(5) .form__legend {
+    margin-bottom: 50px;
+  }
+
+  .form__textarea {
+    width: 631px;
+    min-height: 174px;
+    padding: 20px 15px;
+  }
+
+  .form__fieldset:nth-child(5) .form__field {
+    width: 300px;
+  }
+
+  .form__fieldset:nth-child(5) .form__fields-list {
+    min-height: 110px;
+  }
+
+  .form__fieldset:nth-child(5) {
+    margin-bottom: 50px;
+  }
+
+  .form__fields-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__button {
+    width: 283px;
+    //margin-bottom: 72px;
+    min-height: 52px;
+    float: left;
+  }
+
+  .form__note {
+    line-height: 50px;
+
+  }
 }
 
-//@media (min-width: @desktop-width) {
-//
-//}
+@media (min-width: @desktop-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__fieldset:first-child,
+  .form__fieldset:nth-child(2) {
+    width: 570px;
+  }
+
+  .form__fieldset:first-child {
+    min-height: 196px;
+    padding: 0;
+  }
+
+  .form__fieldset:nth-child(3) div {
+    width: 1220px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__fieldset:nth-child(3) .form__field:first-of-type {
+    margin-bottom: 0;
+  }
+
+  .form__fieldset:nth-child(3) .form__field {
+    width: 570px;
+
+  }
+
+  .form__fieldset:nth-child(4) .form__textarea {
+    width: 1220px;
+  }
+
+  .form__fieldset:nth-child(4) {
+    margin-bottom: 60px;
+  }
+
+  .form__button {
+    width: 568px;
+    margin-bottom: 0;
+  }
+
+  .form__note {
+    margin-left: 82px;
+  }
+}
