@@ -50,6 +50,16 @@
   line-height: 20px;
   color: @color-greyish-brown;
   background-color: @color-grey-back;
+
+  &:hover,
+  &:focus {
+    background-color: @color-grey-back-button;
+  }
+
+  &:active {
+    background-color: @color-grey-back-button;
+    color: @color-greyish-brown-light;
+  }
 }
 
 @media (min-width: @tablet-width) {

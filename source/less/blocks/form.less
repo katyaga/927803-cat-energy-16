@@ -77,6 +77,19 @@
     color: @color-greyish-brown;
     text-transform: uppercase;
   }
+
+  &:hover,
+  &:focus {
+    border-color: @color-grey-border-dark;
+  }
+
+  &:active {
+    border: 2px solid @color-greyish-brown;
+  }
+
+  &:invalid {
+    border: 2px solid @color-coral;
+  }
 }
 
 .form__textarea {
