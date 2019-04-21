@@ -16,7 +16,6 @@
   box-sizing: border-box;
   border-bottom: 1px solid @color-grey-border;
   text-align: center;
-
 }
 
 .site-list__item a {
@@ -38,8 +37,13 @@
 
 .site-list__item--active a {
   border-bottom: 2px solid @color-green;
+
   &:hover,
-  &:focus,
+  &:focus {
+    border-bottom: 2px solid @color-green;
+    opacity: 1;
+  }
+
   &:active {
     border-bottom: 2px solid @color-green;
     opacity: 1;
@@ -52,7 +56,6 @@
     min-height: 60px;
     flex-direction: row;
     justify-content: flex-end;
-
   }
 
   .site-list__item a {
