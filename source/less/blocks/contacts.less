@@ -11,3 +11,53 @@
   margin: 0;
   line-height: 20px;
 }
+
+.contacts .container {
+  display: flex;
+  min-height: 114px;
+  z-index: 2;
+}
+
+.contacts__map {
+  margin: -38px auto 0;
+  display: block;
+  width: 320px;
+  height: 400px;
+  background-color: chartreuse;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts .container {
+    min-height: 201px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .contacts__for-dealers {
+    width: 155px;
+  }
+
+  .contacts__address {
+    width: 155px;
+  }
+
+  .contacts__map {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
+  .contacts .container {
+    width: 570px;
+    position: absolute;
+    top: 95px;
+    background-color: @color-white;
+  }
+}

@@ -1,10 +1,18 @@
+.other-goods {
+  margin-bottom: 35px;
+}
+
 .other-goods__button {
+  min-height: 40px;
+  width: 280px;
   font-size: 16px;
   line-height: 20px;
 }
 
 .other-goods__title {
+  //width: ;
   margin: 0;
+  margin-bottom: 30px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -13,6 +21,8 @@
 }
 
 .other-goods__name {
+  //display: block;
+  width: 280px;
   padding: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
@@ -27,4 +37,86 @@
 .other-goods__price {
   padding: 0;
   line-height: 14px;
+}
+
+.other-goods .container {
+  margin-top: 25px;
+  //padding-bottom: 35px;
+}
+
+.other-goods__row {
+  width: 100%;
+  min-height: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //flex-direction: column;
+  //align-items: ;
+}
+
+//.other-goods__table {
+//  margin-bottom: 39px;
+//}
+
+@media (min-width: @tablet-width) {
+  .other-goods {
+    margin-bottom: 76px;
+  }
+
+  .other-goods .container {
+    margin-top: 75px;
+    //padding-bottom: 69px;
+  }
+
+  .other-goods__title {
+    margin-bottom: 75px;
+    width: 708px;
+  }
+
+  .other-goods__table {
+    width: 100%;
+    border: 1px solid @color-grey-back;
+    border-collapse: collapse;
+  }
+
+  .other-goods__row {
+    min-height: 140px;
+    padding: 25px 37px;
+
+    border-collapse: collapse;
+  }
+
+  .other-goods__row:not(:first-child) {
+    border-top: 1px solid @color-grey-back;
+  }
+
+  .other-goods__button {
+    width: 633px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .other-goods {
+    margin-bottom: 86px;
+  }
+
+  .other-goods .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .other-goods__table {
+    width: 895px;
+  }
+
+  .other-goods__row {
+    min-height: 71px;
+    padding: 15px 0;
+    align-items: center;
+  }
+
+  .other-goods__button {
+    width: 245px;
+  }
 }

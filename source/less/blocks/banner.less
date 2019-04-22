@@ -1,14 +1,23 @@
 .banner {
+  position: relative;
+  min-height: 480px;
+  margin-bottom: 22px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
   font-family: "OswaldRegular", "Arial", sans-serif;
   color: @color-white;
-  background-color: @color-green;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.banner__text {
+  width: 280px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 .banner__heading {
-  margin: 0;
+  margin: 0 0 18px 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
@@ -18,4 +27,124 @@
   line-height: 14px;
   font-weight: normal;
   text-transform: uppercase;
+}
+
+.banner .container {
+  min-height: 440px;
+}
+
+.banner__back {
+  min-height: 305px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: @color-back-green;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner__image {
+  width: 280px;
+  min-height: 270px;
+  display: block;
+  background-color: #ff9f2f;
+}
+
+.banner__button {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  min-height: 40px;
+  line-height: 40px;
+  width: 280px;
+
+  &:hover,
+  &:focus {
+    background-color: @color-green-hover;
+  }
+
+  &:active {
+    color: @color-white-active;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1299px) {
+  .banner__back {
+    background: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .banner {
+    min-height: 840px;
+    padding-bottom: 0;
+    color: @color-black-two;
+  }
+
+  .banner__image {
+    width: 709px;
+    min-height: 609px;
+  }
+
+  .banner__text {
+    margin-left: 90px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .banner__heading {
+    margin-bottom: 30px;
+  }
+
+  .banner__button {
+    min-height: 52px;
+    line-height: 52px;
+    text-align: center;
+    bottom: 580px;
+    width: 245px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner {
+    z-index: -1;
+    min-height: 696px;
+    margin-top: -110px;
+    margin-bottom: 80px;
+    padding-top: 142px;
+    padding-bottom: 0;
+  }
+
+  .banner__back {
+    width: 50%;
+    right: 0;
+    left: auto;
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: right;
+  }
+
+  .banner .container {
+    display: flex;
+    //padding-left: 80px;
+  }
+
+  .banner__text {
+    width: 410px;
+    margin: 80px 0 50px 80px;
+  }
+
+  .banner__button {
+    position: static;
+    margin-top: 50px;
+  }
+
+  .banner__image {
+    width: 552px;
+    min-height: 499px;
+    margin-left: -40px;
+  }
 }

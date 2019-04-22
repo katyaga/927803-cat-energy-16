@@ -1,16 +1,25 @@
 .programs__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .programs__item {
+  min-height: 266px;
+  margin-bottom: 20px;
+  padding: 35px 20px 20px 20px;
   background-color: @color-grey-back;
 }
 
 .programs__title {
+  display: block;
   font-family: "OswaldRegular", "Arial", sans-serif;
   margin: 0;
+  margin-left: 70px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 37px;
   font-weight: normal;
@@ -20,6 +29,7 @@
 
 .programs__description {
   margin: 0;
+  margin-bottom: 37px;
 }
 
 .programs__button {
@@ -28,4 +38,56 @@
   line-height: 16px;
   color: @color-black-two;
   text-transform: uppercase;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    margin-bottom: 20px;
+  }
+
+  .programs__item {
+    min-height: 372px;
+    margin-bottom: 30px;
+    padding: 80px 280px 60px 50px;
+  }
+
+  .programs__title {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .product__description {
+    margin-bottom: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+    margin-left: 0;
+    margin-bottom: 30px;
+    padding-right: 50px;
+  }
+
+  .programs__item:first-child {
+    margin-right: 80px;
+  }
+
+  .programs__title {
+    margin-left: 210px;
+    margin-bottom: 70px;
+  }
+
+  .product__description {
+    margin-bottom: 30px;
+  }
 }
