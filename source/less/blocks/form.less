@@ -120,8 +120,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   .form__input {
     min-height: 52px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .form__field {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .form__fieldset:not(.form__fieldset--date) {
@@ -158,6 +173,8 @@
     width: 631px;
     min-height: 174px;
     padding: 20px 15px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .form__fieldset--add .form__field {
@@ -182,10 +199,12 @@
     //margin-bottom: 72px;
     min-height: 52px;
     float: left;
+    font-size: 20px;
   }
 
   .form__note {
     line-height: 50px;
+    font-size: 16px;
   }
 }
 
