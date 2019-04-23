@@ -12,9 +12,12 @@
   line-height: 20px;
 }
 
-.contacts .container {
-  display: flex;
+.contacts__text {
+  width: 100%;
+  justify-content: space-between;
   min-height: 114px;
+  align-items: center;
+  display: flex;
   z-index: 2;
 }
 
@@ -28,11 +31,12 @@
 
 @media (min-width: @tablet-width) {
   .contacts .container {
-    min-height: 201px;
-    align-items: center;
-    justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .contacts__text {
+    min-height: 201px;
   }
 
   .contacts__for-dealers {
@@ -54,10 +58,11 @@
     position: relative;
   }
 
-  .contacts .container {
+  .contacts__text {
     width: 570px;
     position: absolute;
     top: 95px;
+    padding: 65px 90px 55px 75px;
     background-color: @color-white;
   }
 }
