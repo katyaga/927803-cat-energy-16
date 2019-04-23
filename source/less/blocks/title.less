@@ -1,8 +1,21 @@
 .title {
   margin: 0;
+  margin-top: 30px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 36px;
   line-height: 60px;
   font-weight: normal;
   color: @color-black-two;
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .title {
+    margin-top: 60px;
+  }
 }

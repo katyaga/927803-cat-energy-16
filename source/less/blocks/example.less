@@ -25,14 +25,30 @@
 
 .example__table tr {
   width: 124px;
+  height: 56px;
+  text-align: center;
+  align-items: center;
   margin-bottom: 25px;
-  //display: block;
+  border: 1px solid @color-grey-border-dark;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .example__table-field {
+  text-align: center;
   padding: 0;
+  margin-bottom: -12px;
   font-size: 12px;
   line-height: 12px;
+}
+
+.example__table span {
+  width: 88px;
+  display: inline-block;
+  padding: 0 15px;
+  background-color: @color-grey-back;
 }
 
 .example__table-value {
@@ -96,6 +112,25 @@
   //margin-top: 35px;
 }
 
+.example__progressbar {
+  padding: 3px 6px;
+  width: 84px;
+  height: 14px;
+  background: @color-white;
+  border-radius: 6px;
+  border: 1px solid @color-grey-border-dark;
+
+  cursor: pointer;
+}
+
+.example__progressbar-scale {
+  //display: inline-block;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: @color-green;
+}
+
 @media (min-width: @tablet-width) {
   .example {
     min-height: 1081px;
@@ -108,6 +143,7 @@
     align-content: flex-start;
     margin-bottom: 80px;
     padding-top: 45px;
+    justify-content: space-between;
     //min-height: 619px;
   }
 
@@ -137,11 +173,12 @@
 
   .example__table tr {
     width: 162px;
+    height: 72px;
   }
 
   .example__cost {
-    margin-left: auto;
-    width: 174px;
+    //margin-left: auto;
+    width: 140px;
     text-align: right;
   }
 
@@ -150,6 +187,32 @@
     min-height: 462px;
     //background-color: @color-grey-back;
   }
+
+  .example__table span {
+    width: auto;
+    display: inline;
+    background-color: @color-white;
+  }
+}
+
+.example__progressbar {
+  position: relative;
+  width: 428px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: @color-grey-scale;
+}
+
+.example__progressbar-scale {
+  position: absolute;
+  //top: -2px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  //border: 13px solid @color-white;
+  //background-color: @color-green;
+  border-radius: 50%;
 }
 
 @media (min-width: @desktop-width) {
@@ -169,6 +232,7 @@
 
   .example__description {
     width: 450px;
+    justify-content: flex-start;
   }
 
   .example__text {
@@ -183,8 +247,9 @@
   }
 
   .example__cost {
-    width: 335px;
+    width: 100%;
     margin: 0;
+    justify-content: space-between;
     text-align: left;
   }
 
@@ -193,5 +258,9 @@
     justify-content: space-between;
     margin: 0;
     padding: 0 0 0 80px;
+  }
+
+  .example__table span {
+    background-color: @color-grey-back;
   }
 }
