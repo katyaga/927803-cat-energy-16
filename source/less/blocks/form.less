@@ -2,7 +2,7 @@
   margin: 0;
   //margin-bottom: 30px;
   padding: 0;
-  min-inline-size: 100%;
+  width: 100%;
   border: none;
 
   &--date {
@@ -282,14 +282,31 @@
     justify-content: space-between;
   }
 
-  .form__fieldset--date,
-  .form__fieldset--programs {
-    width: 570px;
+  .form__fields-list {
+    width: 100%;
   }
 
-  .form__fieldset--date {
-    min-height: 196px;
-    padding: 0;
+  .form__fieldset {
+    &--date {
+      width: 570px;
+      margin: 0;
+      min-height: 196px;
+      padding: 0;
+    }
+
+    &--programs {
+      width: 570px;
+      margin: 0;
+      margin-bottom: 67px;
+    }
+
+    &--contacts {
+      margin-bottom: 70px;
+    }
+
+    &--massage {
+      margin-bottom: 67px;
+    }
   }
 
   .form__fieldset--contacts div {
@@ -312,13 +329,23 @@
     width: 1220px;
   }
 
-  .form__fieldset--massage {
-    margin-bottom: 60px;
+  .form__fieldset--add .form__fields-list {
+    min-height: 50px;
+    padding: 0;
+  }
+
+  .form__fieldset--add .form__field {
+    width: 245px;
+    //margin-right: 70px;
   }
 
   .form__button {
     width: 568px;
     margin-bottom: 0;
+  }
+
+  .form__bottom {
+    padding-top: 23px;
   }
 
   .form__note {
