@@ -89,6 +89,7 @@
 }
 
 .example__button {
+  padding: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -251,9 +252,9 @@
     //width: 1300px;
     //margin: 0 auto;
     //padding: 0 40px;
-    min-height: 655px;
-
-    background: linear-gradient(@color-white 30%, @color-grey-back 30%, @color-grey-back 70%);
+    //min-height: 655px;
+    padding-bottom: 0;
+    background: linear-gradient(@color-white 28%, @color-grey-back 28%, @color-grey-back 72%);
   }
 
   .example .container {
@@ -263,18 +264,24 @@
 
   .example__description {
     width: 450px;
+    padding-top: 54px;
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 
   .example__text {
-    margin-top: 135px;
-    margin-bottom: 70px;
+    margin-top: 147px;
+    margin-bottom: 66px;
   }
 
   .example__list {
     //min-height: 462px;
     width: 640px;
     margin: 0 0 40px 0;
+  }
+
+  .example__table {
+    margin-bottom: 57px;
   }
 
   .example__cost {
@@ -288,7 +295,7 @@
     //width: 100%;
     justify-content: space-between;
     margin: 0;
-    padding: 0 0 0 80px;
+    padding: 0 0 0 70px;
   }
 
   .example__table span {
