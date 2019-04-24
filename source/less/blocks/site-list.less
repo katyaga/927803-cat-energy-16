@@ -53,18 +53,20 @@
 @media (min-width: @tablet-width) {
   .site-list {
     //width: ;
-    min-height: 60px;
+    //min-height: 60px;
     flex-direction: row;
-    //justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   .site-list__link {
+
     font-family: "OswaldRegular", "Arial", sans-serif;
     font-size: 18px;
     line-height: 25px;
   }
 
   .site-list__item {
+    margin-left: 37px;
     min-height: 40px;
     //margin-left: 35px;
     border: none;
@@ -75,6 +77,10 @@
   .site-list {
     background: transparent;
   }
+
+  //.site-list__item {
+  //  margin: 0;
+  //}
 
   .site-list--main .site-list__link {
     color: @color-white;

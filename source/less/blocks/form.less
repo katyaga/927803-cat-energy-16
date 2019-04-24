@@ -1,20 +1,39 @@
 .form__fieldset {
   margin: 0;
+  //margin-bottom: 30px;
   padding: 0;
   min-inline-size: 100%;
   border: none;
+
+  &--date {
+    padding: 23px 0;
+  }
+
+  &--programs {
+    border-top: 1px solid @color-grey-border;
+    border-bottom: 1px solid @color-grey-border;
+    margin-bottom: 27px;
+  }
+
+  &--massage {
+    margin-bottom: 27px;
+  }
+
+  &--contacts {
+    margin-bottom: 27px;
+  }
 }
 
-.form__fieldset:not(.form__fieldset--date) {
-  margin-bottom: 27px;
-}
+//.form__fieldset:not(.form__fieldset--date) {
+//  margin-bottom: 27px;
+//}
 
-.form__fieldset--date {
-  padding: 23px 0;
-}
+//.form__fieldset--date {
+//  padding: 23px 0;
+//}
 
 .form__fields-list {
-  min-height: 158px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,10 +43,11 @@
 }
 
 .form__fieldset--programs .form__fields-list {
-  padding: 20px 0;
+  padding: 18px 0;
 }
 
 .form__legend {
+  //margin-right: 15px;
   padding: 0;
   font-size: 24px;
   line-height: 24px;
@@ -40,7 +60,7 @@
 }
 
 .form__fieldset .form__legend {
-  margin-bottom: 27px;
+  margin-bottom: 33px;
 }
 
 .form__field {
@@ -90,7 +110,7 @@
 
 .form__textarea {
   width: 280px;
-  padding: 15px;
+  padding: 13px;
   min-height: 150px;
   font-size: 16px;
   line-height: 18px;
@@ -105,16 +125,21 @@
   }
 }
 
+.form__bottom {
+  padding-top: 10px;
+}
+
 .form__button {
   min-height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
   font-size: 16px;
   line-height: 20px;
 }
 
 .form__note {
-  margin-left: 60px;
+  margin-left: 62px;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
 }
@@ -126,6 +151,7 @@
   }
 
   .form__input {
+    padding-left: 20px;
     min-height: 52px;
 
     &::placeholder {
@@ -139,12 +165,34 @@
     line-height: 20px;
   }
 
-  .form__fieldset:not(.form__fieldset--date) {
-    margin-bottom: 70px;
+  .form__fieldset--programs .form__field {
+    padding-left: 88px;
   }
 
-  .form__fieldset--date {
-    margin-bottom: 50px;
+  //.form__fieldset:not(.form__fieldset--date) {
+  //  margin-bottom: 72px;
+  //}
+
+  .form__fieldset {
+    &--date {
+      margin-bottom: 50px;
+    }
+
+    &--programs {
+      margin-bottom: 74px;
+    }
+
+    &--massage {
+      margin-bottom: 65px;
+    }
+
+    &--contacts {
+      margin-bottom: 65px;
+    }
+
+    &--add {
+      margin-bottom: 35px;
+    }
   }
 
   .form__fieldset--date .form__field:not(:last-child),
@@ -153,16 +201,22 @@
   }
 
   .form__fieldset--programs .form__fields-list {
+    //border: none;
     min-height: 196px;
-    border: 1px solid @color-grey-border;
-    padding-left: 88px;
+    border-left: 1px solid @color-grey-border;
+    border-right: 1px solid @color-grey-border;
+    padding-left: 0;
     //margin-bottom: 75px;
   }
 
-  .form__fieldset--contacts .form__legend,
+  .form__fieldset--contacts .form__legend {
+    //padding-top: 27px;
+    margin-bottom: 75px;
+  }
+
   .form__fieldset--massage .form__legend {
     //padding-top: 27px;
-    margin-bottom: 65px;
+    margin-bottom: 75px;
   }
 
   .form__fieldset--add .form__legend {
@@ -172,26 +226,39 @@
   .form__textarea {
     width: 631px;
     min-height: 174px;
-    padding: 20px 15px;
+    padding: 10px 17px;
     font-size: 20px;
     line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   .form__fieldset--add .form__field {
     width: 300px;
+    //margin-right: 70px;
   }
 
   .form__fieldset--add .form__fields-list {
-    min-height: 110px;
+    min-height: 130px;
   }
 
-  .form__fieldset--add {
-    margin-bottom: 50px;
-  }
+  //.form__fieldset--add {
+  //  margin-bottom: 50px;
+  //}
+
+  //.form__fieldset--programs .form__fields-list {
+  //  padding-left: 0;
+  //}
 
   .form__fields-list {
+    width: 708px;
+    padding-right: 60px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .form__button {
