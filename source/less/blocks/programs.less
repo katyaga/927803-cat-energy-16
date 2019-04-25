@@ -33,15 +33,37 @@
 }
 
 .programs__button {
+  position: relative;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: @color-black-two;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    &::after {
+      width: 34px;
+      height: 12px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
+}
+
+.programs__button::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 12px;
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  //top: 2px;
+  //right: -px;
 }
 
 @media (min-width: @tablet-width) {

@@ -54,6 +54,32 @@
   color: @color-black-two;
 }
 
+.form__field--phone {
+  position: relative;
+  //display: inline-block;
+}
+
+.form__field--phone svg {
+  position: absolute;
+  right: 20px;
+  width: 21px;
+  height: 21px;
+  fill: @color-black-two;
+}
+
+.form__field--email {
+  position: relative;
+  //display: inline-block;
+}
+
+.form__field--email svg {
+  position: absolute;
+  right: 20px;
+  width: 18px;
+  height: 14px;
+  fill: @color-black-two;
+}
+
 .form__fieldset--date .form__field:not(:last-child),
 .form__fieldset--contacts .form__field:not(:last-child) {
   margin-bottom: 14px;
@@ -106,6 +132,16 @@
   &:invalid {
     border: 2px solid @color-coral;
   }
+}
+
+.form__input--phone:active + .form__input-svg,
+.form__input--email:active + .form__input-svg {
+  fill: @color-green;
+}
+
+.form__input--phone:invalid + .form__input-svg,
+.form__input--email:invalid + .form__input-svg {
+  fill: @color-coral;
 }
 
 .form__textarea {

@@ -13,7 +13,7 @@
 
 .page-footer__logo {
   display: block;
-  height: 24px;
+  //height: 24px;
   margin-bottom: 30px;
   //border-bottom: 1px solid @color-grey-border;
 }
@@ -56,6 +56,25 @@
   &:active {
     color: @color-greyish-brown-light;
   }
+}
+
+.page-footer__copyright-svg {
+  width: 27px;
+  height: 34px;
+}
+
+.page-footer__copyright-image {
+  fill: @color-grey-icon;
+}
+
+.page-footer__copyright-image:hover .page-footer__copyright-svg,
+.page-footer__copyright-image:focus .page-footer__copyright-svg {
+  fill: @color-green;
+}
+
+.page-footer__copyright-image:active .page-footer__copyright-svg {
+  fill: @color-green;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
