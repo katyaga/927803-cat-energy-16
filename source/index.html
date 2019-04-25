@@ -45,9 +45,12 @@
           <b class="banner__slogan">Занялся собой? Займись котом!</b>
           <a class="banner__button button" href="form.html">Подобрать программу</a>
         </div>
-
-        <img class="banner__image" src="img/" width="280" height="270"
-            alt="Упаковка «CAT ENERGY» 500гр. (вкус - курица)">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img class="banner__image" src="img/index-can-mobile@1x.png" width="280" height="271"
+              alt="Упаковка «CAT ENERGY» 500гр. (вкус - курица)">
+        </picture>
       </div>
       <div class="banner__back"></div>
     </section>

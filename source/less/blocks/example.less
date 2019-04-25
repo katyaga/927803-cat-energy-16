@@ -126,7 +126,6 @@
   background: @color-white;
   border-radius: 6px;
   border: 1px solid @color-grey-border-dark;
-
   cursor: pointer;
 }
 
@@ -236,13 +235,15 @@
 
   .example__progressbar-scale {
     position: absolute;
-    //top: -2px;
+    box-sizing: content-box;
+    top: -16px;
     left: 50%;
     width: 8px;
     height: 8px;
     padding: 0;
     border: 13px solid @color-white;
-    //background-color: @color-green;
+    background-color: @color-green;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     border-radius: 50%;
   }
 }
