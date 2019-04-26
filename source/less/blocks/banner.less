@@ -9,15 +9,15 @@
 }
 
 .banner__text {
-  width: 280px;
+  max-width: 100%;
   box-sizing: border-box;
-  padding-top: 30px;
-  margin-bottom: 25px;
+  padding-top: 27px;
+  margin-bottom: 26px;
   text-align: center;
 }
 
 .banner__heading {
-  margin: 0 0 18px 0;
+  margin: 0 0 23px 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
@@ -41,16 +41,18 @@
   top: 0;
   left: 0;
   background-color: @color-back-green;
+  //background-color: linear-gradient(@color-back-green 50%, @color-green-back 50%, @color-green-back 50%);
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .banner__image {
-  width: 280px;
+  width: 100%;
   min-height: 270px;
   display: block;
-  background-color: #ff9f2f;
+
+  //background-color: #ff9f2f;
 }
 
 .banner__button {
@@ -81,44 +83,56 @@
   .banner {
     min-height: 840px;
     padding-bottom: 0;
+    margin-bottom: 0;
     color: @color-black-two;
   }
 
   .banner__image {
-    width: 709px;
+    //width: 100;
     min-height: 609px;
   }
 
   .banner__text {
-    margin-left: 90px;
+    padding-top: 30px;
+    margin-left: 88px;
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .banner__heading {
-    margin-bottom: 30px;
+    width: 500px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .banner__slogan {
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .banner__button {
+    font-size: 20px;
     min-height: 52px;
     line-height: 52px;
     text-align: center;
-    bottom: 580px;
+    bottom: 530px;
     width: 245px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .banner {
-    z-index: -1;
+    //z-index: -1;
     min-height: 696px;
-    margin-top: -110px;
+    margin-top: -130px;
     margin-bottom: 80px;
     padding-top: 142px;
     padding-bottom: 0;
   }
 
   .banner__back {
+
     width: 50%;
     right: 0;
     left: auto;
@@ -129,12 +143,19 @@
 
   .banner .container {
     display: flex;
+
     //padding-left: 80px;
   }
 
+  .banner__heading {
+    margin-bottom: 41px;
+  }
+
   .banner__text {
+    z-index: 10;
     width: 410px;
-    margin: 80px 0 50px 80px;
+    margin: 0 0 50px 80px;
+    padding-top: 80px;
   }
 
   .banner__button {
@@ -145,6 +166,7 @@
   .banner__image {
     width: 552px;
     min-height: 499px;
+    //margin-top: 142px;
     margin-left: -40px;
   }
 }

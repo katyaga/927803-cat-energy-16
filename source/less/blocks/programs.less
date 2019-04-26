@@ -10,7 +10,7 @@
 .programs__item {
   min-height: 266px;
   margin-bottom: 20px;
-  padding: 35px 20px 20px 20px;
+  padding: 31px 20px 20px 20px;
   background-color: @color-grey-back;
 }
 
@@ -29,39 +29,76 @@
 
 .programs__description {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 }
 
 .programs__button {
+  position: relative;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   color: @color-black-two;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    &::after {
+      width: 34px;
+      height: 12px;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+    }
+  }
+
   &:active {
     opacity: 0.3;
   }
 }
 
+.programs__button::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 12px;
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  margin-left: 12px;
+  top: 8px;
+  //right: -px;
+}
+
 @media (min-width: @tablet-width) {
   .programs {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .programs__item {
-    min-height: 372px;
     margin-bottom: 30px;
-    padding: 80px 280px 60px 50px;
+    padding: 75px 280px 60px 53px;
+
+    &--pro {
+      padding-right: 340px;
+    }
   }
 
   .programs__title {
+    font-size: 36px;
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
-  .product__description {
+  .programs__description {
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 57px;
+  }
+
+  .programs__button {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .programs__button::after {
+    margin-left: 23px;
   }
 }
 
@@ -74,8 +111,9 @@
   .programs__item {
     width: 570px;
     margin-left: 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     padding-right: 50px;
+    padding-bottom: 60px;
   }
 
   .programs__item:first-child {
@@ -83,11 +121,11 @@
   }
 
   .programs__title {
-    margin-left: 210px;
-    margin-bottom: 70px;
+    margin-left: 160px;
+    margin-bottom: 75px;
   }
 
-  .product__description {
+  .programs__description {
     margin-bottom: 30px;
   }
 }

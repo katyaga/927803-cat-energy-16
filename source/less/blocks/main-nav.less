@@ -1,12 +1,13 @@
 .main-nav {
   position: relative;
-  min-height: 198px;
+  //min-height: 198px;
+  border-bottom: 1px solid @color-grey-border;
 }
 
 .main-nav__toggle {
   position: absolute;
   top: -42px;
-  right: 46px;
+  left: 78%;
   z-index: 2;
 
   display: block;
@@ -39,8 +40,23 @@
   transform: rotate(45deg);
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 500px;
+    margin-top: 25px;
+    width: 530px;
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    margin-top: 57px;
+    z-index: 10;
   }
 }

@@ -1,19 +1,39 @@
 .form__fieldset {
   margin: 0;
+  //margin-bottom: 30px;
   padding: 0;
+  width: 100%;
   border: none;
+
+  &--date {
+    padding: 23px 0;
+  }
+
+  &--programs {
+    border-top: 1px solid @color-grey-border;
+    border-bottom: 1px solid @color-grey-border;
+    margin-bottom: 27px;
+  }
+
+  &--massage {
+    margin-bottom: 27px;
+  }
+
+  &--contacts {
+    margin-bottom: 27px;
+  }
 }
 
-.form__fieldset:not(:first-child) {
-  margin-bottom: 27px;
-}
+//.form__fieldset:not(.form__fieldset--date) {
+//  margin-bottom: 27px;
+//}
 
-.form__fieldset:first-child {
-  padding: 23px 0;
-}
+//.form__fieldset--date {
+//  padding: 23px 0;
+//}
 
 .form__fields-list {
-  min-height: 158px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,25 +42,51 @@
   list-style: none;
 }
 
-.form__fieldset:nth-child(2) .form__fields-list {
-  padding: 20px 0;
+.form__fieldset--programs .form__fields-list {
+  padding: 18px 0;
 }
 
 .form__legend {
+  //margin-right: 15px;
   padding: 0;
   font-size: 24px;
   line-height: 24px;
   color: @color-black-two;
 }
 
-.form__fieldset:first-child .form__field:not(:last-child),
-.form__fieldset:nth-child(3) .form__field:not(:last-child) {
+.form__field--phone {
+  position: relative;
+  //display: inline-block;
+}
+
+.form__field--phone svg {
+  position: absolute;
+  right: 20px;
+  width: 21px;
+  height: 21px;
+  fill: @color-black-two;
+}
+
+.form__field--email {
+  position: relative;
+  //display: inline-block;
+}
+
+.form__field--email svg {
+  position: absolute;
+  right: 20px;
+  width: 18px;
+  height: 14px;
+  fill: @color-black-two;
+}
+
+.form__fieldset--date .form__field:not(:last-child),
+.form__fieldset--contacts .form__field:not(:last-child) {
   margin-bottom: 14px;
 }
 
 .form__fieldset .form__legend {
-  //padding-top: 27px;
-  margin-bottom: 27px;
+  margin-bottom: 33px;
 }
 
 .form__field {
@@ -53,10 +99,6 @@
   color: @color-black;
 
   text-transform: uppercase;
-}
-
-.form__label {
-  //margin-right: 15px;
 }
 
 .form__input {
@@ -92,9 +134,19 @@
   }
 }
 
+.form__input--phone:active + .form__input-svg,
+.form__input--email:active + .form__input-svg {
+  fill: @color-green;
+}
+
+.form__input--phone:invalid + .form__input-svg,
+.form__input--email:invalid + .form__input-svg {
+  fill: @color-coral;
+}
+
 .form__textarea {
   width: 280px;
-  padding: 15px;
+  padding: 13px;
   min-height: 150px;
   font-size: 16px;
   line-height: 18px;
@@ -109,76 +161,140 @@
   }
 }
 
+.form__bottom {
+  padding-top: 10px;
+}
+
 .form__button {
   min-height: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
   font-size: 16px;
   line-height: 20px;
 }
 
 .form__note {
-  margin-left: 60px;
+  margin-left: 62px;
+  font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
 }
 
 @media (min-width: @tablet-width) {
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   .form__input {
+    padding-left: 20px;
     min-height: 52px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
-  .form__fieldset:not(:first-child) {
-    margin-bottom: 70px;
+  .form__field {
+    font-size: 20px;
+    line-height: 20px;
   }
 
-  .form__fieldset:first-child {
-    margin-bottom: 50px;
+  .form__fieldset--programs .form__field {
+    padding-left: 88px;
   }
 
-  .form__fieldset:first-child .form__field:not(:last-child),
-  .form__fieldset:nth-child(3) .form__field:not(:last-child) {
+  //.form__fieldset:not(.form__fieldset--date) {
+  //  margin-bottom: 72px;
+  //}
+
+  .form__fieldset {
+    &--date {
+      margin-bottom: 50px;
+    }
+
+    &--programs {
+      margin-bottom: 74px;
+    }
+
+    &--massage {
+      margin-bottom: 65px;
+    }
+
+    &--contacts {
+      margin-bottom: 65px;
+    }
+
+    &--add {
+      margin-bottom: 35px;
+    }
+  }
+
+  .form__fieldset--date .form__field:not(:last-child),
+  .form__fieldset--contacts .form__field:not(:last-child) {
     margin-bottom: 20px;
   }
 
-  .form__fieldset:nth-child(2) .form__fields-list {
+  .form__fieldset--programs .form__fields-list {
+    //border: none;
     min-height: 196px;
-    border: 1px solid @color-grey-border;
-    padding-left: 88px;
+    border-left: 1px solid @color-grey-border;
+    border-right: 1px solid @color-grey-border;
+    padding-left: 0;
     //margin-bottom: 75px;
   }
 
-  .form__fieldset:nth-child(3) .form__legend,
-  .form__fieldset:nth-child(4) .form__legend {
+  .form__fieldset--contacts .form__legend {
     //padding-top: 27px;
-    margin-bottom: 65px;
+    margin-bottom: 75px;
   }
 
-  .form__fieldset:nth-child(5) .form__legend {
+  .form__fieldset--massage .form__legend {
+    //padding-top: 27px;
+    margin-bottom: 75px;
+  }
+
+  .form__fieldset--add .form__legend {
     margin-bottom: 50px;
   }
 
   .form__textarea {
     width: 631px;
     min-height: 174px;
-    padding: 20px 15px;
+    padding: 10px 17px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
-  .form__fieldset:nth-child(5) .form__field {
+  .form__fieldset--add .form__field {
     width: 300px;
+    //margin-right: 70px;
   }
 
-  .form__fieldset:nth-child(5) .form__fields-list {
-    min-height: 110px;
+  .form__fieldset--add .form__fields-list {
+    min-height: 130px;
   }
 
-  .form__fieldset:nth-child(5) {
-    margin-bottom: 50px;
-  }
+  //.form__fieldset--add {
+  //  margin-bottom: 50px;
+  //}
+
+  //.form__fieldset--programs .form__fields-list {
+  //  padding-left: 0;
+  //}
 
   .form__fields-list {
+    width: 708px;
+    padding-right: 60px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .form__button {
@@ -186,10 +302,12 @@
     //margin-bottom: 72px;
     min-height: 52px;
     float: left;
+    font-size: 20px;
   }
 
   .form__note {
     line-height: 50px;
+    font-size: 16px;
   }
 }
 
@@ -200,43 +318,70 @@
     justify-content: space-between;
   }
 
-  .form__fieldset:first-child,
-  .form__fieldset:nth-child(2) {
-    width: 570px;
+  .form__fields-list {
+    width: 100%;
   }
 
-  .form__fieldset:first-child {
-    min-height: 196px;
-    padding: 0;
+  .form__fieldset {
+    &--date {
+      width: 570px;
+      margin: 0;
+      min-height: 196px;
+      padding: 0;
+    }
+
+    &--programs {
+      width: 570px;
+      margin: 0;
+      margin-bottom: 67px;
+    }
+
+    &--contacts {
+      margin-bottom: 70px;
+    }
+
+    &--massage {
+      margin-bottom: 67px;
+    }
   }
 
-  .form__fieldset:nth-child(3) div {
-    width: 1220px;
+  .form__fieldset--contacts div {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .form__fieldset:nth-child(3) .form__field:first-of-type {
+  .form__fieldset--contacts .form__field:first-of-type {
     margin-bottom: 0;
   }
 
-  .form__fieldset:nth-child(3) .form__field {
+  .form__fieldset--contacts .form__field {
     width: 570px;
   }
 
-  .form__fieldset:nth-child(4) .form__textarea {
+  .form__fieldset--massage .form__textarea {
     width: 1220px;
   }
 
-  .form__fieldset:nth-child(4) {
-    margin-bottom: 60px;
+  .form__fieldset--add .form__fields-list {
+    min-height: 50px;
+    padding: 0;
+  }
+
+  .form__fieldset--add .form__field {
+    width: 245px;
+    //margin-right: 70px;
   }
 
   .form__button {
     width: 568px;
     margin-bottom: 0;
+  }
+
+  .form__bottom {
+    padding-top: 23px;
   }
 
   .form__note {
