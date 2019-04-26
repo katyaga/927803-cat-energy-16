@@ -1,6 +1,7 @@
-.inner-page-main__heading h1 {
+.inner-page-main__heading {
   margin: 0;
-  margin-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 28px;
   color: @color-black-two;
 }
 
@@ -8,8 +9,14 @@
   background-color: @color-grey-back;
 }
 
+@media (min-width: @tablet-width) {
+  .inner-page-main__heading {
+    margin-top: 30px;
+  }
+}
+
 @media (min-width: @desktop-width) {
-  .inner-page-main__heading h1 {
+  .inner-page-main__heading {
     margin-top: 60px;
   }
 }
