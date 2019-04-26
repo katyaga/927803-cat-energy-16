@@ -145,7 +145,11 @@
         <div class="example__slider">
           <ul class="example__list">
             <li class="example__item">
-              <img src="#" width="311" height="232" alt="Фото кота до диеты">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Фото кота до диеты">
+              </picture>
             </li>
           </ul>
           <div class="example__slide-switch">
