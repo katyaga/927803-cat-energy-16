@@ -3,14 +3,52 @@
 }
 
 .checkbox-button__label {
+  position: relative;
+
   &:active {
     color: @color-black-light;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -46px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @color-grey-border;
+    background: @color-white;
+  }
+}
+
+.checkbox-button__input:checked + label::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 17px;
+  top: -4px;
+  left: -41px;
+  //background-position: center;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .checkbox-button {
     padding-left: 55px;
+  }
+
+  .checkbox-button__label {
+    &::before {
+      width: 40px;
+      height: 40px;
+      top: -12px;
+      left: -55px;
+    }
+  }
+
+  .checkbox-button__input:checked + label::after {
+    left: -45px;
   }
 }
 
