@@ -26,8 +26,10 @@
   position: relative;
   margin: -38px auto 0;
   display: block;
-  width: 320px;
+  //width: 100%;
+  min-width: 320px;
   height: 400px;
+  text-align: center;
 
   &::before {
     content: "";
@@ -62,7 +64,7 @@
 
   .contacts__map {
     margin-top: 0;
-    width: 768px;
+    min-width: 768px;
     //background-image: url("../img/bg-map-tablet@1x.png");
 
     &::before {
