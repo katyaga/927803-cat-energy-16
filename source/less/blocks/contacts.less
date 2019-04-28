@@ -23,11 +23,23 @@
 }
 
 .contacts__map {
+  position: relative;
   margin: -38px auto 0;
   display: block;
-  width: 100%;
+  width: 320px;
   height: 400px;
-  background-color: chartreuse;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 53px;
+    top: 183px;
+    left: 130px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px auto;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -50,7 +62,16 @@
 
   .contacts__map {
     margin-top: 0;
-    width: 100%;
+    width: 768px;
+    //background-image: url("../img/bg-map-tablet@1x.png");
+
+    &::before {
+      width: 113px;
+      height: 106px;
+      top: 155px;
+      left: 332px;
+      background-size: 113px auto;
+    }
   }
 }
 
@@ -65,5 +86,16 @@
     top: 95px;
     padding: 65px 90px 55px 75px;
     background-color: @color-white;
+    text-align: left;
+  }
+
+  .contacts__map {
+    &::before {
+      width: 113px;
+      height: 106px;
+      top: 155px;
+      left: 332px;
+      background-size: 113px auto;
+    }
   }
 }

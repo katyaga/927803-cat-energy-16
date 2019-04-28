@@ -10,7 +10,7 @@
 }
 
 .example__description {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .example__text {
@@ -86,13 +86,26 @@
   list-style: none;
   width: 100%;
   //min-height: 232px;
-  background-color: burlywood;
+  //background-color: burlywood;
 }
 
 .example__item {
   margin: 0;
   padding: 0;
+  height: 240px;
+  text-align: center;
 }
+
+.example__item-before {
+  display: block;
+  //display: none;
+}
+
+.example__item-after {
+  display: none;
+  //display: block;
+}
+
 
 .example__button {
   padding: 0;
@@ -119,9 +132,10 @@
 .example__slide-switch {
   margin: 0 auto;
   width: 100%;
-  padding: 0 35px;
+  padding: 0 38px 0 43px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   //margin-top: 35px;
 }
 
@@ -146,6 +160,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .example {
+    //padding-top: 15px;
     padding-bottom: 73px;
     //margin: 0;
     //min-height: 1081px;
@@ -156,7 +171,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 83px;
     padding-top: 27px;
     justify-content: space-between;
     //min-height: 619px;
@@ -171,9 +186,9 @@
   }
 
   .example__list {
-    //width: 708px;
-    //min-height: 517px;
-    margin-bottom: 22px;
+    width: 100%;
+    height: 517px;
+    margin-bottom: 20px;
     //z-index: 2;
   }
 
@@ -185,9 +200,18 @@
     align-items: center;
   }
 
-  .example__item img {
-    width: 690px;
+  .example__item {
+    width: 100%;
     height: auto;
+  }
+
+  .example__item-before {
+    text-align: right;
+  }
+
+  .example__item-after {
+    text-align: right;
+    //margin-right: 10px;
   }
 
   .example__table {
@@ -225,6 +249,7 @@
   }
 
   .example__slider {
+    width: 100%;
     //margin-top: 80px;
     //min-height: 462px;
     //background-color: @color-grey-back;
@@ -263,10 +288,10 @@
   .example {
     //width: 1300px;
     //margin: 0 auto;
-    //padding: 0 40px;
+    padding-top: 15px;
     //min-height: 655px;
-    padding-bottom: 70px;
-    background: linear-gradient(@color-white 28%, @color-grey-back 28%, @color-grey-back 72%);
+    padding-bottom: 73px;
+    background: linear-gradient(@color-white 31%, @color-grey-back 31%, @color-grey-back 69%);
   }
 
   .example .container {
@@ -286,9 +311,13 @@
     margin-bottom: 66px;
   }
 
+  .example__slider {
+    width: 690px;
+  }
+
   .example__list {
     //min-height: 462px;
-    width: 640px;
+    //width: 690px;
     margin: 0 0 40px 0;
   }
 
@@ -304,15 +333,15 @@
   }
 
   .example__item img {
-    width: 690px;
-    height: auto;
+    //width: 690px;
+    //height: auto;
   }
 
   .example__slide-switch {
     //width: 100%;
     justify-content: space-between;
     margin: 0;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 120px;
   }
 
   .example__table span {
