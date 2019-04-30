@@ -1,6 +1,5 @@
 .banner {
   position: relative;
-  min-height: 480px;
   margin-bottom: 22px;
   padding-bottom: 40px;
   box-sizing: border-box;
@@ -29,10 +28,6 @@
   text-transform: uppercase;
 }
 
-.banner .container {
-  min-height: 440px;
-}
-
 .banner__back {
   min-height: 305px;
   width: 100%;
@@ -54,8 +49,9 @@
 
 .banner__image {
   width: 100%;
-  min-height: 270px;
+  height: 270px;
   display: block;
+  margin-bottom: 3px;
 
   //background-color: #ff9f2f;
 }
@@ -64,7 +60,6 @@
   position: absolute;
   z-index: 10;
   bottom: 0;
-  min-height: 40px;
   line-height: 40px;
   width: 280px;
 
@@ -86,13 +81,14 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    min-height: 840px;
+    //min-height: 840px;
     padding-bottom: 0;
     margin-bottom: 0;
     color: @color-black-two;
   }
 
   .banner__image {
+    margin-bottom: 0;
     //width: 100;
     min-height: 609px;
   }
@@ -101,12 +97,12 @@
     padding-top: 30px;
     margin-left: 88px;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .banner__heading {
     width: 500px;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -129,11 +125,11 @@
 @media (min-width: @desktop-width) {
   .banner {
     //z-index: -1;
-    min-height: 696px;
+    //min-height: 696px;
     margin-top: -130px;
     margin-bottom: 80px;
     padding-top: 142px;
-    padding-bottom: 0;
+    padding-bottom: 55px;
   }
 
   .banner__back {

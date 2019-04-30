@@ -3,22 +3,17 @@
 }
 
 .social__list {
+  padding: 0;
+  margin: 0;
   display: flex;
   width: 133px;
+  padding-top: 21px;
+  padding-bottom: 18px;
   //justify-content: space-between;
-  align-items: center;
-  min-height: 62px;
-  margin: 0;
-  padding: 0;
+  //align-items: center;
   //padding-left: 5px;
   list-style: none;
 }
-
-//.social__item {
-//  width: 23px;
-//  height: 23px;
-//  //background-color: blue;
-//}
 
 .social__link {
   fill: @color-grey-icon;
@@ -52,6 +47,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .social__list {
+    padding: 0;
+    align-items: center;
+  }
+
   .social__link--vkontakte svg {
     width: 30px;
     height: 16px;
