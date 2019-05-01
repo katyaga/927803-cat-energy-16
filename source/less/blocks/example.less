@@ -1,5 +1,4 @@
 .example {
-  //min-height: 705px;
   background-color: @color-grey-back;
   padding-top: 17px;
   padding-bottom: 35px;
@@ -10,7 +9,7 @@
 }
 
 .example__description {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .example__text {
@@ -22,31 +21,39 @@
 
 .example__table {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .example__table tbody {
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  //justify-content: space-between;
 }
 
 .example__table tr {
   width: 124px;
-  height: 56px;
+  float: left;
+  //height: 56px;
   text-align: center;
-  align-items: center;
+  //align-items: center;
   margin-bottom: 25px;
+  padding-top: 12px;
   border: 1px solid @color-grey-border-dark;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+}
+
+.example__table tr:first-child {
+  margin-right: 28px;
 }
 
 .example__table-field {
+  display: inline-block;
+  width: 100%;
   text-align: center;
   padding: 0;
-  margin-bottom: -12px;
+  margin-bottom: -20px;
   font-size: 12px;
   line-height: 12px;
 }
@@ -59,19 +66,21 @@
 }
 
 .example__table-value {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1px;
   padding: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   color: @color-black-two;
-
   text-transform: uppercase;
 }
 
 .example__cost {
   margin: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
-  line-height: 20px;
+  line-height: 30px;
   color: @color-black-two;
   text-align: center;
   text-transform: uppercase;
@@ -81,13 +90,30 @@
   margin: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding: 0;
   list-style: none;
   width: 100%;
-  min-height: 232px;
-  background-color: burlywood;
+  //background-color: burlywood;
 }
+
+.example__item {
+  margin: 0;
+  padding: 0;
+  //height: 240px;
+  text-align: center;
+}
+
+.example__item-before {
+  display: block;
+  //display: none;
+}
+
+.example__item-after {
+  display: none;
+  //display: block;
+}
+
 
 .example__button {
   padding: 0;
@@ -114,9 +140,10 @@
 .example__slide-switch {
   margin: 0 auto;
   width: 100%;
-  padding: 0 35px;
+  padding: 0 38px 0 43px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   //margin-top: 35px;
 }
 
@@ -141,9 +168,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .example {
+    //padding-top: 15px;
     padding-bottom: 73px;
     //margin: 0;
-    //min-height: 1081px;
     background: linear-gradient(@color-white 57%, @color-grey-back 57%, @color-grey-back 43%);
   }
 
@@ -151,10 +178,9 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
     padding-top: 27px;
     justify-content: space-between;
-    //min-height: 619px;
   }
 
   .example__text {
@@ -166,9 +192,9 @@
   }
 
   .example__list {
-    //width: 708px;
-    min-height: 517px;
-    margin-bottom: 22px;
+    width: 100%;
+    //height: 517px;
+    margin-bottom: 15px;
     //z-index: 2;
   }
 
@@ -178,6 +204,20 @@
     padding-left: 68px;
     padding-right: 68px;
     align-items: center;
+  }
+
+  .example__item {
+    width: 100%;
+    //height: auto;
+  }
+
+  .example__item-before {
+    text-align: right;
+  }
+
+  .example__item-after {
+    text-align: right;
+    //margin-right: 10px;
   }
 
   .example__table {
@@ -195,19 +235,23 @@
   }
 
   .example__table-field {
-    margin-bottom: -6px;
+    margin-bottom: -11px;
     font-size: 14px;
     line-height: 14px;
   }
 
   .example__table tr {
     width: 162px;
-    min-height: 72px;
+    padding-top: 15px;
     margin: 0;
+
+    &:first-child {
+      margin-right: 38px;
+    }
   }
 
   .example__cost {
-    margin-top: 12px;
+    margin-top: 8px;
     //align-self: flex-end;
     width: 174px;
     text-align: right;
@@ -215,8 +259,9 @@
   }
 
   .example__slider {
+    width: 100%;
     //margin-top: 80px;
-    min-height: 462px;
+    //min-height: 462px;
     //background-color: @color-grey-back;
   }
 
@@ -253,10 +298,9 @@
   .example {
     //width: 1300px;
     //margin: 0 auto;
-    //padding: 0 40px;
-    //min-height: 655px;
-    padding-bottom: 70px;
-    background: linear-gradient(@color-white 28%, @color-grey-back 28%, @color-grey-back 72%);
+    padding-top: 15px;
+    padding-bottom: 71px;
+    background: linear-gradient(@color-white 31%, @color-grey-back 31%, @color-grey-back 69%);
   }
 
   .example .container {
@@ -276,14 +320,18 @@
     margin-bottom: 66px;
   }
 
+  .example__slider {
+    width: 690px;
+  }
+
   .example__list {
     //min-height: 462px;
-    width: 640px;
-    margin: 0 0 40px 0;
+    //width: 690px;
+    margin: 0 0 37px 0;
   }
 
   .example__table {
-    margin-bottom: 57px;
+    margin-bottom: 53px;
   }
 
   .example__cost {
@@ -293,11 +341,16 @@
     text-align: left;
   }
 
+  .example__item img {
+    //width: 690px;
+    //height: auto;
+  }
+
   .example__slide-switch {
     //width: 100%;
     justify-content: space-between;
     margin: 0;
-    padding: 0 0 0 70px;
+    padding: 0 0 0 120px;
   }
 
   .example__table span {

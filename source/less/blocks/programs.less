@@ -3,18 +3,17 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 .programs__item {
-  min-height: 266px;
   margin-bottom: 20px;
   padding: 31px 20px 20px 20px;
   background-color: @color-grey-back;
 }
 
 .programs__title {
+  position: relative;
   display: block;
   font-family: "OswaldRegular", "Arial", sans-serif;
   margin: 0;
@@ -25,6 +24,44 @@
   font-weight: normal;
   color: @color-black-two;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -68px;
+    width: 50px;
+    height: 51px;
+    border-radius: 50%;
+    background-color: @color-green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+}
+
+.programs__item--slim .programs__title {
+  &::after {
+    top: -9px;
+    left: -60px;
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/icon-cat-slim.svg");
+    //background-size: ;
+  }
+}
+
+.programs__item--pro .programs__title {
+  &::after {
+    top: 4px;
+    left: -78px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+  }
 }
 
 .programs__description {
@@ -84,6 +121,32 @@
     font-size: 36px;
     margin-left: 0;
     margin-bottom: 25px;
+
+    &::before {
+      top: 16px;
+      left: 394px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .programs__item--slim .programs__title {
+    &::after {
+      top: 3px;
+      left: 423px;
+      width: 142px;
+      height: 194px;
+      //background-size: ;
+    }
+  }
+
+  .programs__item--pro .programs__title {
+    &::after {
+      top: 57px;
+      left: 359px;
+      width: 268px;
+      height: 113px;
+    }
   }
 
   .programs__description {
@@ -123,6 +186,32 @@
   .programs__title {
     margin-left: 160px;
     margin-bottom: 75px;
+
+    &::before {
+      top: -27px;
+      left: -160px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programs__item--slim .programs__title {
+    &::after {
+      top: -33px;
+      left: -148px;
+      width: 71px;
+      height: 97px;
+      //background-size: ;
+    }
+  }
+
+  .programs__item--pro .programs__title {
+    &::after {
+      top: -6px;
+      left: -178px;
+      width: 134px;
+      height: 57px;
+    }
   }
 
   .programs__description {

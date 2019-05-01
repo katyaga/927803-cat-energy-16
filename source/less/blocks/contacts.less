@@ -15,25 +15,52 @@
 
 .contacts__text {
   width: 100%;
+  padding-top: 28px;
+  padding-bottom: 28px;
   justify-content: space-between;
-  min-height: 114px;
-  align-items: center;
+  //min-height: 114px;
+  //align-items: center;
   display: flex;
   z-index: 2;
 }
 
 .contacts__map {
+  position: relative;
   margin: -38px auto 0;
-  display: block;
+  //display: block;
+  //width: 100%;
+  //min-width: 320px;
+  height: 400px;
+  text-align: center;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 320px auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 53px;
+    top: 50%;
+    left: 50%;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts__map iframe {
   width: 100%;
   height: 400px;
-  background-color: chartreuse;
 }
 
 @media (min-width: @tablet-width) {
   .contacts__text {
     padding: 65px 40px 60px;
-    //min-height: 201px;
   }
 
   .contacts__for-dealers {
@@ -50,7 +77,21 @@
 
   .contacts__map {
     margin-top: 0;
-    width: 100%;
+    min-width: 768px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-size: 767px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
+
+    &::before {
+      width: 113px;
+      height: 106px;
+      //top: 155px;
+      //left: 332px;
+      //background-size: 113px auto;
+    }
   }
 }
 
@@ -65,5 +106,25 @@
     top: 95px;
     padding: 65px 90px 55px 75px;
     background-color: @color-white;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+
+  .contacts__map {
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-size: 1440px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
+
+    //&::before {
+    //  width: 113px;
+    //  height: 106px;
+    //  top: 155px;
+    //  left: 700px;
+    //}
   }
 }
