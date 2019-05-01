@@ -1,3 +1,7 @@
+//.form {
+//  overflow: hidden;
+//}
+
 .form__fieldset {
   margin: 0;
   padding: 0;
@@ -9,8 +13,12 @@
   }
 
   &--programs {
-    border-top: 1px solid @color-grey-border;
-    border-bottom: 1px solid @color-grey-border;
+    width: 100% + 14px;
+    margin-left: -20px;
+    padding-left: 21px;
+    padding-right: 20px;
+    //border-top: 1px solid @color-grey-border;
+    border: 1px solid @color-grey-border;
     margin-bottom: 29px;
   }
 
@@ -24,8 +32,9 @@
 }
 
 .form__label {
+  flex-shrink: 0;
+  max-width: 100px;
   //display: inline-block;
-  //width:;
 }
 
 .form__fields-list {
@@ -78,11 +87,35 @@
 }
 
 .form__legend {
+  //width: content-box;
+  //display: inline-block;
+  position: relative;
   //margin-right: 15px;
   padding: 0;
   font-size: 24px;
   line-height: 24px;
   color: @color-black-two;
+  vertical-align: middle;
+  //margin-right: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: solid @color-white;
+    border-width: 0 20px;
+    top: 50%;
+    //right: -170px;
+    width: 700px;
+    height: 3px;
+    background: @color-green;
+  }
+}
+
+.form__fieldset--contacts .form__legend {
+
+  &::after {
+    border-width: 0 50px;
+  }
 }
 
 .form__field--phone {
@@ -207,7 +240,20 @@
   .form__legend {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: solid @color-white;
+      border-width: 0 20px;
+      top: 50%;
+      left: -700px;
+      width: 700px;
+      height: 3px;
+      background: @color-green
+    }
   }
+
 
   .form__input {
     padding-left: 20px;
@@ -217,6 +263,10 @@
       font-size: 20px;
       line-height: 20px;
     }
+  }
+
+  .form__label {
+    max-width: 120px;
   }
 
   .form__field--email svg {
@@ -247,6 +297,9 @@
     }
 
     &--programs {
+      width: 100%;
+      margin: 0;
+      padding: 0;
       margin-bottom: 74px;
     }
 
@@ -374,6 +427,12 @@
 
   .form__fields-list {
     width: 100%;
+  }
+
+  .form__legend {
+    &::after {
+      width: 1400px;
+    }
   }
 
   .form__fieldset {
