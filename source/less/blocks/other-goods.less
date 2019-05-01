@@ -5,14 +5,22 @@
 
 .other-goods__button {
   min-height: 40px;
-  width: 280px;
+  //width: 280px;
   font-size: 16px;
   line-height: 40px;
 }
 
 .other-goods__table {
+  width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   border-bottom: 1px solid @color-grey-border;
+}
+
+.other-goods__table td {
+  width: 100%;
+  display: block;
+  //text-align: center;
 }
 
 .other-goods__title {
@@ -28,7 +36,7 @@
 
 .other-goods__name {
   //display: block;
-  width: 280px;
+  //width: 280px;
   padding: 0;
   margin-bottom: 13px;
   font-family: "OswaldRegular", "Arial", sans-serif;
@@ -39,13 +47,6 @@
 
 .other-goods__name a {
   color: @color-black;
-}
-
-.other-goods__quantity,
-.other-goods__price {
-  padding: 0;
-  line-height: 14px;
-  //margin-bottom: 10px;
 }
 
 .other-goods .container {
@@ -59,11 +60,24 @@
   padding-top: 13px;
   padding-bottom: 17px;
   display: flex;
+  //display: table-cell;
   flex-wrap: wrap;
-  justify-content: space-between;
+  //justify-content: center;
   border-top: 1px solid @color-grey-border;
   //flex-direction: column;
-  //align-items: ;
+  //align-items: center;
+}
+
+.other-goods__table .other-goods__quantity,
+.other-goods__table .other-goods__price {
+  width: 50%;
+  padding: 0;
+  line-height: 14px;
+  //margin-bottom: 10px;
+}
+
+.other-goods__price {
+  text-align: right;
 }
 
 .other-goods__row td:last-child {
@@ -72,6 +86,7 @@
   padding-top: 15px;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .other-goods {
     //margin-top: 0;
@@ -92,7 +107,8 @@
     line-height: 36px;
   }
 
-  .other-goods__name {
+  .other-goods__table .other-goods__name {
+    width: 50%;
     font-size: 20px;
     line-height: 20px;
   }
@@ -102,15 +118,17 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    padding-top: 3px;
   }
 
-  .other-goods__quantity {
-    width: 210px;
+  .other-goods__table .other-goods__quantity {
+    width: 220px;
+    padding-top: 8px;
   }
 
-  .other-goods__price {
-    width: 45px;
+  .other-goods__table .other-goods__price {
+    width: 60px;
+    margin-left: 35px;
+    padding-top: 8px;
   }
 
 
@@ -136,6 +154,7 @@
 
   .other-goods__button {
     width: 633px;
+    //width: 100%;
   }
 }
 
@@ -167,26 +186,29 @@
     align-items: center;
   }
 
-  .other-goods__quantity {
-    width: 220px;
-    padding-left: 10px;
+  .other-goods__table .other-goods__quantity {
+    width: 210px;
+    //padding-left: 10px;
   }
 
-  .other-goods__quantity,
-  .other-goods__price {
+  .other-goods__table .other-goods__quantity,
+  .other-goods__table .other-goods__price {
     text-align: left;
-    padding-top: 8px;
+    //padding-top: 8px;
   }
 
-  .other-goods__name {
+  .other-goods__table .other-goods__name {
+    width: 325px;
     margin-bottom: 0;
   }
 
   .other-goods__row td:last-child {
+    width: 250px;
     padding-top: 0;
   }
 
   .other-goods__button {
     width: 245px;
+    margin-left: 20px;
   }
 }

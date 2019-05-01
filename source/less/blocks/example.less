@@ -9,7 +9,7 @@
 }
 
 .example__description {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .example__text {
@@ -21,32 +21,39 @@
 
 .example__table {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
 }
 
 .example__table tbody {
-  display: flex;
-  justify-content: space-between;
+  //display: flex;
+  //justify-content: space-between;
 }
 
 .example__table tr {
   width: 124px;
+  float: left;
   //height: 56px;
   text-align: center;
-  align-items: center;
+  //align-items: center;
   margin-bottom: 25px;
   padding-top: 12px;
   border: 1px solid @color-grey-border-dark;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
   //justify-content: space-between;
 }
 
+.example__table tr:first-child {
+  margin-right: 28px;
+}
+
 .example__table-field {
+  display: inline-block;
+  width: 100%;
   text-align: center;
   padding: 0;
-  margin-bottom: -15px;
+  margin-bottom: -20px;
   font-size: 12px;
   line-height: 12px;
 }
@@ -59,7 +66,9 @@
 }
 
 .example__table-value {
-  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1px;
   padding: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 24px;
@@ -71,7 +80,7 @@
 .example__cost {
   margin: 0;
   font-family: "OswaldRegular", "Arial", sans-serif;
-  line-height: 10px;
+  line-height: 30px;
   color: @color-black-two;
   text-align: center;
   text-transform: uppercase;
@@ -226,7 +235,7 @@
   }
 
   .example__table-field {
-    margin-bottom: -6px;
+    margin-bottom: -11px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -235,10 +244,14 @@
     width: 162px;
     padding-top: 15px;
     margin: 0;
+
+    &:first-child {
+      margin-right: 38px;
+    }
   }
 
   .example__cost {
-    margin-top: 12px;
+    margin-top: 8px;
     //align-self: flex-end;
     width: 174px;
     text-align: right;
@@ -286,7 +299,7 @@
     //width: 1300px;
     //margin: 0 auto;
     padding-top: 15px;
-    padding-bottom: 73px;
+    padding-bottom: 71px;
     background: linear-gradient(@color-white 31%, @color-grey-back 31%, @color-grey-back 69%);
   }
 
@@ -318,7 +331,7 @@
   }
 
   .example__table {
-    margin-bottom: 57px;
+    margin-bottom: 53px;
   }
 
   .example__cost {
