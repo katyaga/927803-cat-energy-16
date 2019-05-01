@@ -10,16 +10,35 @@
   }
 }
 
-.radio-button__label::before {
-  content: "";
-  position: absolute;
-  top: -7px;
-  left: -46px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid @color-grey-border;
-  border-radius: 50%;
-  background: @color-white;
+.radio-button__label {
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -46px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @color-grey-border;
+    border-radius: 50%;
+    background: @color-white;
+    z-index: 10;
+  }
+}
+
+.radio-button__input:hover + &::before,
+.radio-button__input:focus + &::before {
+  border: 1px solid @color-grey-radio;
+}
+
+.radio-button__input:active + &::before {
+  border-color: @color-grey-radio;
+  opacity: 0.3;
+}
+
+.radio-button__input:active + &::after {
+  //border-color: @color-grey-radio;
+  opacity: 0.3;
 }
 
 .radio-button__input:checked + label::after {
@@ -31,6 +50,11 @@
   height: 12px;
   border-radius: 50%;
   background: @color-green;
+  z-index: 10;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
