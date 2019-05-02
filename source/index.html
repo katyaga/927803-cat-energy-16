@@ -9,10 +9,39 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<7e92d4e1-f5a8-42ec-842a-caf36c94e48a>&lang=ru_RU" type="text/javascript">
     </script>
     <script type="text/javascript">
+      function getIconSize () {
+        var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+        if (width < 768) {
+          return [55, 53];
+        } else {
+          return [113, 106];
+        }
+      }
+
+      function getPlacemark(myMap) {
+        return new ymaps.Placemark([59.93875261, 30.32314838], {
+          hintContent: 'Собственный значок метки',
+          balloonContent: 'Магазин "CAT ENERGY"'
+        }, {
+          // Опции.
+          // Своё изображение иконки метки.
+          iconImageHref: "img/map-pin.png",
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Размеры метки.
+          iconImageSize: getIconSize(),
+          // // Смещение левого верхнего угла иконки относительно
+          // // её "ножки" (точки привязки).
+          // iconImageOffset: [-30, -40],
+          iconOffset: getIconSize().map(function (item) {return -0.5 * item}),
+        });
+      }
+
       // Функция ymaps.ready() будет вызвана, когда
       // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
       ymaps.ready(init);
-      function init(){
+      function init() {
         // Создание карты.
         var myMap = new ymaps.Map("map", {
           // Координаты центра карты.
@@ -25,27 +54,12 @@
           zoom: 17
         });
 
-        // let icon = "img/map-pin.png";
-        let myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Собственный значок метки',
-          balloonContent: 'Это красивая метка'
-        }, {
-          // Опции.
-          // Своё изображение иконки метки.
-          iconImageHref: "img/map-pin.png",
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
+        myMap.geoObjects.add(getPlacemark(myMap));
 
-          // Размеры метки.
-          iconImageSize: [55, 53],
-          // // Смещение левого верхнего угла иконки относительно
-          // // её "ножки" (точки привязки).
-          iconImageOffset: [-20, -38]
-        });
-
-        myMap.geoObjects
-          .add(myPlacemark)
-          // .add(glyphIcon1);
+        window.onresize = function(event) {
+          myMap.geoObjects.removeAll();
+          myMap.geoObjects.add(getPlacemark(myMap));
+        };
       }
     </script>
   </head>
