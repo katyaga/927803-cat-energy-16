@@ -45,7 +45,7 @@
 
         myMap.geoObjects
           .add(myPlacemark)
-          .add(glyphIcon1);
+          // .add(glyphIcon1);
       }
     </script>
   </head>
@@ -102,7 +102,7 @@
         </picture>
       </a>
     </div>
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть-закрыть меню</span>
       </button>
@@ -235,7 +235,7 @@
 
         <div class="example__slider">
           <ul class="example__list">
-            <li class="example__item example__item-before">
+            <li class="example__item example__item-before example__item--active">
               <picture>
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
@@ -259,7 +259,7 @@
             </li>
           </ul>
           <div class="example__slide-switch">
-            <button class="example__button" type="button">Было</button>
+            <button class="example__button example__button--active" type="button">Было</button>
             <div class="example__progressbar">
               <div class="example__progressbar-scale"></div>
             </div>
@@ -360,7 +360,101 @@
         </a>
       </div>
     </div>
-
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    // navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+
+
+
+    // var slide_before = document.querySelector(".example__item-before");
+    // var slide_after = document.querySelector(".example__item-after");
+    // // var slider = document.querySelector(".example__list");
+    //
+    // // var active_dot = document.querySelector(".dot-active");
+    // // var active_slide = document.querySelector(".slide-active");
+    // // var dots = document.querySelectorAll(".main-slider .dot");
+    // var slides = document.querySelectorAll("..example__item");
+    //
+    // var set_active_dot = function (dot) {
+    //   if (active_dot) {
+    //     active_dot.classList.remove("dot-active");
+    //   }
+    //   dot.classList.add("dot-active");
+    //   active_dot = dot;
+    // };
+    //
+    // var set_active_slide_services = function (slide) {
+    //   if (active_slide) {
+    //     active_slide.classList.remove("slide-active");
+    //   }
+    //   slide.classList.add("slide-active");
+    //   active_slide = slide;
+    // };
+    //
+    // var add_click_dot_handler = function (dot, slide) {
+    //   dot.addEventListener('click', function () {
+    //     if (dot !== "dot-active") {
+    //       set_active_dot(dot);
+    //       set_active_slide_services(slide);
+    //     }
+    //   });
+    // };
+    //
+    // for (var k = 0; k < slides.length; k++) {
+    //   add_click_dot_handler(dots[k], slides[k]);
+    // }
+
+    var slider = document.querySelector(".example__list");
+
+    if(slider) {
+      var active_slide = document.querySelector(".example__item--active");
+      var buttons = document.querySelectorAll(".example__button");
+      var button__active = document.querySelector(".example__button--active");
+      var slides = document.querySelectorAll(".example__item");
+      // var toggle = document.querySelector(".");
+
+      var set_active_button = function (button) {
+        if (button__active) {
+          button__active.classList.remove("example__button--active");
+        }
+        button.classList.add("example__button--active");
+        button__active = button;
+      };
+
+      var set_active_slide = function (slide) {
+        if (active_slide) {
+          active_slide.classList.remove("example__item--active");
+        }
+        slide.classList.add("example__item--active");
+        active_slide = slide;
+      };
+
+      var add_click_handler = function (button, slide) {
+        button.addEventListener('click', function () {
+          if (button !== button__active) {
+            set_active_button(button);
+            set_active_slide(slide);
+          }
+        });
+      };
+
+      for (var i = 0; i < slides.length; i++) {
+        add_click_handler(buttons[i], slides[i]);
+      }
+    }
+  </script>
   </body>
 </html>
