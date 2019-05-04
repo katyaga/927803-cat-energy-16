@@ -6,6 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/picturefill.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<7e92d4e1-f5a8-42ec-842a-caf36c94e48a>&lang=ru_RU" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      function getIconSize () {
+        var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+        if (width < 768) {
+          return [55, 53];
+        } else {
+          return [113, 106];
+        }
+      }
+
+      function getPlacemark(myMap) {
+        return new ymaps.Placemark([59.93875261, 30.32314838], {
+          hintContent: 'Собственный значок метки',
+          balloonContent: 'Магазин "CAT ENERGY"'
+        }, {
+          iconImageHref: "img/map-pin.png",
+          iconLayout: 'default#image',
+          iconImageSize: getIconSize(),
+          iconOffset: getIconSize().map(function (item) {return -0.5 * item}),
+        });
+      }
+
+      ymaps.ready(init);
+      function init() {
+        var myMap = new ymaps.Map("map", {
+          center: [59.93875261, 30.32314838],
+          zoom: 17
+        });
+
+        myMap.geoObjects.add(getPlacemark(myMap));
+
+        window.onresize = function(event) {
+          myMap.geoObjects.removeAll();
+          myMap.geoObjects.add(getPlacemark(myMap));
+        };
+      }
+    </script>
     <script src="js/calc.js"></script>
   </head>
   <body>
