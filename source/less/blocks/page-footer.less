@@ -58,6 +58,11 @@
 .page-footer__copyright-svg {
   width: 27px;
   height: 34px;
+
+  &:active {
+    fill: @color-green;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright-image {
@@ -67,11 +72,6 @@
 .page-footer__copyright-image:hover .page-footer__copyright-svg,
 .page-footer__copyright-image:focus .page-footer__copyright-svg {
   fill: @color-green;
-}
-
-.page-footer__copyright-image:active .page-footer__copyright-svg {
-  fill: @color-green;
-  opacity: 0.3;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////

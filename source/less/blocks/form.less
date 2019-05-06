@@ -121,6 +121,7 @@
 
 .form__field--phone svg {
   position: absolute;
+  top: 14px;
   right: 12px;
   width: 21px;
   height: 21px;
@@ -134,6 +135,7 @@
 
 .form__field--email svg {
   position: absolute;
+  top: 16px;
   right: 17px;
   width: 18px;
   height: 14px;
@@ -159,7 +161,9 @@
   padding-right: 40px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 45px;
+  //vertical-align: middle;
+  text-transform: uppercase;
   color: @color-greyish-brown;
   border: 1px solid @color-grey-border;
 
@@ -222,6 +226,16 @@
   width: 100%;
   font-size: 16px;
   line-height: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: @color-green-hover;
+  }
+
+  &:active {
+    color: @color-white-active;
+    background-color: @color-green-hover;
+  }
 }
 
 .form__note {
@@ -241,7 +255,7 @@
       content: "";
       position: absolute;
       border: solid @color-white;
-      border-width: 0 20px;
+      border-width: 0 40px;
       top: 50%;
       right: 100%;
       width: 100vw;
@@ -260,7 +274,7 @@
 
     &::placeholder {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 50px;
     }
   }
 
@@ -269,11 +283,13 @@
   }
 
   .form__field--email svg {
-    right: 22px;
+    top: 19px;
+    right: 20px;
   }
 
   .form__field--phone svg {
-    right: 20px;
+    top: 16px;
+    right: 18px;
   }
 
   .form__field {
@@ -336,7 +352,17 @@
   }
 
   .form__fieldset--contacts .form__input {
-    margin-left: 18px;
+    &--email {
+      margin-left: 19px;
+    }
+
+    &--phone {
+      margin-left: 14px;
+    }
+  }
+
+  .form__fieldset .form__legend::after {
+    border-width: 0 40px;
   }
 
   .form__fieldset--contacts .form__legend {
