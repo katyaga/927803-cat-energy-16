@@ -20,6 +20,11 @@
 
 .advantages__item {
   margin-bottom: 26px;
+
+  &--number {
+    margin: 0;
+    display: none;
+  }
 }
 
 .advantages__item .advantages__description::after {
@@ -117,9 +122,23 @@
   }
 
   .advantages__item {
+    position: relative;
     //width: 350px;
     margin: 20px 80px 50px 0;
     padding-top: 170px;
+
+    &--number {
+      position: absolute;
+      display: block;
+      z-index: -1;
+      top: 20px;
+      right: 0;
+      //margin-top: -100px;
+      font-size: 280px;
+      line-height: 280px;
+      color: @color-grey-back;
+      font-family: "OswaldRegular", "Arial", sans-serif;
+    }
   }
 
   .advantages__description {
@@ -195,5 +214,9 @@
     padding-top: 185px;
     //margin-right: 70px;
     //min-height: 230px;
+
+    &--number {
+      top: 30px;
+    }
   }
 }

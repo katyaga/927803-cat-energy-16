@@ -24,6 +24,7 @@
 }
 
 .other-goods__title {
+  position: relative;
   //width: ;
   margin: 0;
   margin-bottom: 34px;
@@ -32,6 +33,18 @@
   line-height: 24px;
   color: @color-black-two;
   font-weight: normal;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: solid @color-white;
+    border-width: 0 20px;
+    top: 50%;
+    //right: -170px;
+    width: 100vw;
+    height: 3px;
+    background: @color-green;
+  }
 }
 
 .other-goods__name {
@@ -105,6 +118,22 @@
     width: 708px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: solid @color-white;
+      border-width: 0 37px;
+      top: 50%;
+      right: 100%;
+      width: 100vw;
+      height: 3px;
+      background: @color-green;
+    }
+
+    &::after {
+      border-width: 0 37px;
+    }
   }
 
   .other-goods__table .other-goods__name {

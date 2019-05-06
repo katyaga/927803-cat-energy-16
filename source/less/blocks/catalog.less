@@ -26,12 +26,24 @@
 }
 
 .catalog__show-more {
+  position: relative;
   width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding: 79px 20px 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 25px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    opacity: 0.2;
+  }
 }
 
 .catalog__show-more-title {
@@ -101,6 +113,13 @@
     width: 324px;
     padding: 162px 37px 40px;
     border: 1px solid @color-grey-border;
+
+    &::before {
+      width: 61px;
+      height: 61px;
+      top: 53px;
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 
   .catalog__show-more-button {

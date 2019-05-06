@@ -65,8 +65,20 @@
 }
 
 .programs__description {
+  position: relative;
   margin: 0;
   margin-bottom: 39px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @color-greyish-brown;
+    opacity: 0.1;
+    height: 1px;
+    width: 240px;
+    bottom: -20px;
+    left: 0;
+  }
 }
 
 .programs__button {
@@ -153,6 +165,10 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 57px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .programs__button {
