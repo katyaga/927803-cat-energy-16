@@ -24,7 +24,7 @@
 }
 
 .product__description {
-  width: 138px;
+  width: 137px;
   border-collapse: collapse;
   font-size: 12px;
   line-height: 16px;
@@ -56,6 +56,16 @@
   width: 100%;
   font-size: 16px;
   line-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: @color-green-hover;
+  }
+
+  &:active {
+    color: @color-white-active;
+    background-color: @color-green-hover;
+  }
 }
 
 .product__image {

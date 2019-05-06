@@ -17,18 +17,17 @@
 
 .social__link svg {
   fill: @color-grey-icon;
-  //stroke: @color-grey-icon;
-
-  &:hover,
-  &:focus {
-    fill: @color-green;
-    //stroke: @color-green;
-  }
 
   &:active {
     fill: @color-green;
     opacity: 0.3;
   }
+}
+
+.social__link:hover svg,
+.social__link:focus svg {
+  fill: @color-green;
+  //stroke: @color-green;
 }
 
 .social__link--vkontakte svg {
