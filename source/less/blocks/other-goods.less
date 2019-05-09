@@ -1,13 +1,16 @@
 .other-goods {
+  overflow: hidden;
   margin-bottom: 35px;
   padding-top: 28px;
 }
 
 .other-goods__button {
-  min-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  //min-height: 40px;
   //width: 280px;
   font-size: 16px;
-  line-height: 40px;
+  line-height: 20px;
 
   &:hover,
   &:focus {
@@ -134,7 +137,7 @@
       position: absolute;
       border: solid @color-white;
       border-width: 0 37px;
-      top: 50%;
+      top: 60%;
       right: 100%;
       width: 100vw;
       height: 3px;
@@ -142,6 +145,7 @@
     }
 
     &::after {
+      top: 60%;
       border-width: 0 37px;
     }
   }
@@ -149,25 +153,25 @@
   .other-goods__table .other-goods__name {
     width: 50%;
     font-size: 20px;
-    line-height: 20px;
+    //line-height: 20px;
   }
 
   .other-goods__quantity,
   .other-goods__price {
-    font-size: 16px;
+    //font-size: 16px;
     line-height: 20px;
     text-align: right;
   }
 
   .other-goods__table .other-goods__quantity {
     width: 220px;
-    padding-top: 8px;
+    padding-top: 5px;
   }
 
   .other-goods__table .other-goods__price {
     width: 60px;
     margin-left: 35px;
-    padding-top: 8px;
+    padding-top: 5px;
   }
 
 
@@ -179,12 +183,12 @@
 
   .other-goods__row {
     //min-height: 140px;
-    padding: 25px 37px 28px;
+    padding: 27px 37px 28px;
     border-collapse: collapse;
   }
 
   .other-goods__row td:last-child {
-    padding-top: 12px;
+    padding-top: 14px;
   }
 
   .other-goods__row:not(:first-child) {

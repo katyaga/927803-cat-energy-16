@@ -28,7 +28,7 @@
 }
 
 .form__label {
-  flex-shrink: 0;
+  //flex-shrink: 0;
   max-width: 100px;
   //display: inline-block;
   //width:;
@@ -85,7 +85,7 @@
 
 .form__legend {
   //width: content-box;
-  //display: inline-block;
+  //display: inline;
   position: relative;
   //margin-right: 15px;
   padding: 0;
@@ -99,18 +99,21 @@
     content: "";
     position: absolute;
     border: solid @color-white;
-    border-width: 0 20px;
-    top: 50%;
-    //right: -170px;
-    width: 700px;
+    border-width: 0 22px;
+    top: 60%;
+    left: 100%;
+    width: 100vw;
     height: 3px;
     background: @color-green;
   }
 }
 
 .form__fieldset--contacts .form__legend {
+  width: 181px;
+
   &::after {
-    border-width: 0 50px;
+    //border-width: 0 -10px;
+    top: 30%;
   }
 }
 
@@ -155,13 +158,14 @@
   width: 10px;
   flex-grow: 1;
   display: block;
+  //box-sizing: border-box;
   margin-left: 15px;
   min-height: 45px;
   padding-left: 15px;
   padding-right: 40px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 45px;
+  //line-height: 45px;
   //vertical-align: middle;
   text-transform: uppercase;
   color: @color-greyish-brown;
@@ -174,12 +178,11 @@
     text-transform: uppercase;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: @color-grey-border-dark;
   }
 
-  &:active {
+  &:focus {
     border: 2px solid @color-greyish-brown;
   }
 
@@ -188,8 +191,8 @@
   }
 }
 
-.form__input--phone:active + .form__input-svg,
-.form__input--email:active + .form__input-svg {
+.form__input--phone:focus + .form__input-svg,
+.form__input--email:focus + .form__input-svg {
   fill: @color-green;
 }
 
@@ -256,7 +259,7 @@
       position: absolute;
       border: solid @color-white;
       border-width: 0 40px;
-      top: 50%;
+      top: 60%;
       right: 100%;
       width: 100vw;
       height: 3px;
@@ -294,7 +297,7 @@
 
   .form__field {
     font-size: 20px;
-    line-height: 20px;
+    //line-height: 20px;
   }
 
   .form__fieldset--programs .form__field {
@@ -366,8 +369,13 @@
   }
 
   .form__fieldset--contacts .form__legend {
+    width: max-content;
     //padding-top: 27px;
     margin-bottom: 77px;
+
+    &::after {
+      top: 60%;
+    }
   }
 
   .form__fieldset--massage .form__legend {
@@ -464,6 +472,7 @@
     &--date {
       width: 570px;
       margin: 0;
+      margin-bottom: 70px;
       //min-height: 196px;
       padding: 0;
     }

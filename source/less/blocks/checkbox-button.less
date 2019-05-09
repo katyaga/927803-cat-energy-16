@@ -22,17 +22,17 @@
   }
 }
 
-.checkbox-button__input:hover + &::before,
-.checkbox-button__input:focus + &::before {
+.checkbox-button__input:hover + label::before,
+.checkbox-button__input:focus + label::before {
   border: 1px solid @color-grey-radio;
 }
 
-.checkbox-button__input:active + &::before {
+.checkbox-button__input:active + label::before {
   border-color: @color-grey-radio;
   opacity: 0.3;
 }
 
-.checkbox-button__input:active + &::after {
+.checkbox-button__input:active + label::after {
   //border-color: @color-grey-radio;
   opacity: 0.3;
 }

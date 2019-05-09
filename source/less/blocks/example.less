@@ -1,4 +1,5 @@
 .example {
+  max-width: 100%;
   background-color: @color-grey-back;
   padding-top: 17px;
   padding-bottom: 35px;
@@ -14,9 +15,12 @@
 
 .example__text {
   width: 266px;
+  padding-top: 24px;
+  padding-bottom: 23px;
+}
+
+.example__text p {
   margin: 0;
-  margin-top: 24px;
-  margin-bottom: 23px;
 }
 
 .example__table {
@@ -173,8 +177,8 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .example {
-    //padding-top: 15px;
-    padding-bottom: 73px;
+    padding-top: 15px;
+    padding-bottom: 74px;
     //margin: 0;
     background: linear-gradient(@color-white 57%, @color-grey-back 57%, @color-grey-back 43%);
   }
@@ -183,16 +187,16 @@
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: 85px;
+    margin-bottom: 80px;
     padding-top: 27px;
     justify-content: space-between;
   }
 
   .example__text {
     width: 674px;
-    margin-top: 65px;
-    margin-bottom: 50px;
-    font-size: 16px;
+    padding-top: 64px;
+    padding-bottom: 52px;
+    //font-size: 16px;
     line-height: 24px;
   }
 
@@ -213,17 +217,18 @@
 
   .example__item {
     width: 100%;
+    text-align: right;
     //height: auto;
   }
 
-  .example__item-before {
-    text-align: right;
-  }
-
-  .example__item-after {
-    text-align: right;
-    //margin-right: 10px;
-  }
+  //.example__item-before {
+  //  text-align: right;
+  //}
+  //
+  //.example__item-after {
+  //  text-align: right;
+  //  //margin-right: 10px;
+  //}
 
   .example__table {
     margin: 0;
@@ -286,7 +291,7 @@
 
   .example__progressbar-scale {
     position: absolute;
-    //box-sizing: content-box;
+    //box-sizing: border-box;
     top: -16px;
     left: 197px;
     width: 34px;
@@ -300,10 +305,11 @@
     &::after {
       content: "";
       position: absolute;
+      box-sizing: border-box;
       width: 8px;
       height: 8px;
-      top: 12px;
-      left: 12px;
+      top: 39%;
+      left: 38%;
       border-radius: 50%;
       background-color: @color-green;
     }
@@ -342,8 +348,8 @@
   }
 
   .example__text {
-    margin-top: 147px;
-    margin-bottom: 66px;
+    padding-top: 147px;
+    padding-bottom: 66px;
   }
 
   .example__slider {
@@ -357,7 +363,7 @@
   }
 
   .example__table {
-    margin-bottom: 53px;
+    margin-bottom: 50px;
   }
 
   .example__cost {
@@ -365,6 +371,12 @@
     margin: 0;
     justify-content: space-between;
     text-align: left;
+  }
+
+  .example__cost span {
+    &:first-child {
+      margin-right: 60px;
+    }
   }
 
   .example__item img {
