@@ -7,8 +7,6 @@
 .other-goods__button {
   padding-top: 10px;
   padding-bottom: 10px;
-  //min-height: 40px;
-  //width: 280px;
   font-size: 16px;
   line-height: 20px;
 
@@ -33,12 +31,10 @@
 .other-goods__table td {
   width: 100%;
   display: block;
-  //text-align: center;
 }
 
 .other-goods__title {
   position: relative;
-  //width: ;
   margin: 0;
   margin-bottom: 34px;
   font-family: "OswaldRegular", "Arial", sans-serif;
@@ -50,19 +46,16 @@
   &::after {
     content: "";
     position: absolute;
-    border: solid @color-white;
-    border-width: 0 20px;
     top: 50%;
-    //left: 100%;
     width: 100vw;
     height: 3px;
     background: @color-green;
+    border: solid @color-white;
+    border-width: 0 20px;
   }
 }
 
 .other-goods__name {
-  //display: block;
-  //width: 280px;
   padding: 0;
   margin-bottom: 13px;
   font-family: "OswaldRegular", "Arial", sans-serif;
@@ -75,23 +68,13 @@
   color: @color-black;
 }
 
-.other-goods .container {
-  //margin-top: 25px;
-  //padding-bottom: 35px;
-}
-
 .other-goods__row {
   width: 100%;
-  //min-height: 128px;
   padding-top: 13px;
   padding-bottom: 17px;
   display: flex;
-  //display: table-cell;
   flex-wrap: wrap;
-  //justify-content: center;
   border-top: 1px solid @color-grey-border;
-  //flex-direction: column;
-  //align-items: center;
 }
 
 .other-goods__table .other-goods__quantity,
@@ -99,7 +82,6 @@
   width: 50%;
   padding: 0;
   line-height: 14px;
-  //margin-bottom: 10px;
 }
 
 .other-goods__price {
@@ -108,21 +90,14 @@
 
 .other-goods__row td:last-child {
   padding: 0;
-  //min-height: 100px;
   padding-top: 15px;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
 @media (min-width: @tablet-width) {
   .other-goods {
-    //margin-top: 0;
     margin-bottom: 76px;
     padding-top: 8px;
-  }
-
-  .other-goods .container {
-    //margin-top: 75px;
-    //padding-bottom: 69px;
   }
 
   .other-goods__title {
@@ -135,13 +110,13 @@
     &::before {
       content: "";
       position: absolute;
-      border: solid @color-white;
-      border-width: 0 37px;
       top: 60%;
       right: 100%;
       width: 100vw;
       height: 3px;
       background: @color-green;
+      border: solid @color-white;
+      border-width: 0 37px;
     }
 
     &::after {
@@ -153,12 +128,10 @@
   .other-goods__table .other-goods__name {
     width: 50%;
     font-size: 20px;
-    //line-height: 20px;
   }
 
   .other-goods__quantity,
   .other-goods__price {
-    //font-size: 16px;
     line-height: 20px;
     text-align: right;
   }
@@ -182,7 +155,6 @@
   }
 
   .other-goods__row {
-    //min-height: 140px;
     padding: 27px 37px 28px;
     border-collapse: collapse;
   }
@@ -197,7 +169,6 @@
 
   .other-goods__button {
     width: 633px;
-    //width: 100%;
   }
 }
 
@@ -224,20 +195,17 @@
   }
 
   .other-goods__row {
-    //min-height: 71px;
     padding: 15px 0 16px;
     align-items: center;
   }
 
   .other-goods__table .other-goods__quantity {
     width: 210px;
-    //padding-left: 10px;
   }
 
   .other-goods__table .other-goods__quantity,
   .other-goods__table .other-goods__price {
     text-align: left;
-    //padding-top: 8px;
   }
 
   .other-goods__table .other-goods__name {

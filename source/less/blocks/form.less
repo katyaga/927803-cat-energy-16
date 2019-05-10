@@ -11,11 +11,10 @@
   &--programs {
     width: ~"calc(100% + 40px)";
     margin-left: -20px;
+    margin-bottom: 29px;
     padding-left: 20px;
     padding-right: 20px;
-    //border-top: 1px solid @color-grey-border;
     border: 1px solid @color-grey-border;
-    margin-bottom: 29px;
   }
 
   &--massage {
@@ -28,10 +27,7 @@
 }
 
 .form__label {
-  //flex-shrink: 0;
   max-width: 100px;
-  //display: inline-block;
-  //width:;
 }
 
 .form__fields-list {
@@ -40,15 +36,12 @@
   display: flex;
   flex-wrap: wrap;
   text-align: left;
-  //flex-direction: column;
-  //justify-content: space-around;
   list-style: none;
 }
 
 .form__field {
   width: 100%;
   display: flex;
-  //justify-content: space-between;
   align-items: center;
   margin: 0;
   font-size: 16px;
@@ -84,42 +77,36 @@
 }
 
 .form__legend {
-  //width: content-box;
-  //display: inline;
   position: relative;
-  //margin-right: 15px;
   padding: 0;
+  vertical-align: middle;
   font-size: 24px;
   line-height: 24px;
   color: @color-black-two;
-  vertical-align: middle;
-  //margin-right: 20px;
 
   &::after {
     content: "";
     position: absolute;
-    border: solid @color-white;
-    border-width: 0 22px;
     top: 60%;
     left: 100%;
     width: 100vw;
     height: 3px;
     background: @color-green;
+    border: solid @color-white;
+    border-width: 0 22px;
   }
 }
 
 .form__fieldset--contacts .form__legend {
-  width: 181px;
+  max-width: 181px;
 
   &::after {
-    //border-width: 0 -10px;
     top: 30%;
   }
 }
 
 .form__field--phone {
   position: relative;
-  //display: inline-block;
 }
 
 .form__field--phone svg {
@@ -133,7 +120,6 @@
 
 .form__field--email {
   position: relative;
-  //display: inline-block;
 }
 
 .form__field--email svg {
@@ -158,15 +144,12 @@
   width: 10px;
   flex-grow: 1;
   display: block;
-  //box-sizing: border-box;
   margin-left: 15px;
   min-height: 45px;
   padding-left: 15px;
   padding-right: 40px;
   font-family: "OswaldRegular", "Arial", sans-serif;
   font-size: 16px;
-  //line-height: 45px;
-  //vertical-align: middle;
   text-transform: uppercase;
   color: @color-greyish-brown;
   border: 1px solid @color-grey-border;
@@ -219,7 +202,6 @@
 }
 
 .form__bottom {
-  //margin-top: 4px;
   padding-top: 15px;
 }
 
@@ -257,13 +239,13 @@
     &::before {
       content: "";
       position: absolute;
-      border: solid @color-white;
-      border-width: 0 40px;
       top: 60%;
       right: 100%;
       width: 100vw;
       height: 3px;
       background: @color-green;
+      border: solid @color-white;
+      border-width: 0 40px;
     }
 
     &::after {
@@ -297,21 +279,15 @@
 
   .form__field {
     font-size: 20px;
-    //line-height: 20px;
   }
 
   .form__fieldset--programs .form__field {
     padding-left: 88px;
   }
 
-  //.form__fieldset:not(.form__fieldset--date) {
-  //  margin-bottom: 72px;
-  //}
-
   .form__fieldset {
     &--date {
       margin-bottom: 50px;
-      //padding-top: 30px;
     }
 
     &--programs {
@@ -340,14 +316,11 @@
   }
 
   .form__fieldset--programs .form__fields-list {
-    //border: none;
-    //min-height: 196px;
     padding-top: 33px;
+    padding-left: 0;
     padding-bottom: 2px;
     border-left: 1px solid @color-grey-border;
     border-right: 1px solid @color-grey-border;
-    padding-left: 0;
-    //margin-bottom: 75px;
   }
 
   .form__fieldset--date .form__input {
@@ -369,8 +342,7 @@
   }
 
   .form__fieldset--contacts .form__legend {
-    width: max-content;
-    //padding-top: 27px;
+    max-width: 100%;
     margin-bottom: 77px;
 
     &::after {
@@ -379,7 +351,6 @@
   }
 
   .form__fieldset--massage .form__legend {
-    //padding-top: 27px;
     margin-bottom: 75px;
   }
 
@@ -402,7 +373,6 @@
 
   .form__fieldset--add .form__field {
     width: 290px;
-    //margin-right: 70px;
   }
 
   .form__fieldset--add .form__fields-list {
@@ -416,16 +386,7 @@
     margin-bottom: 32px;
   }
 
-  //.form__fieldset--add {
-  //  margin-bottom: 50px;
-  //}
-
-  //.form__fieldset--programs .form__fields-list {
-  //  padding-left: 0;
-  //}
-
   .form__fields-list {
-    //width: 708px;
     padding-right: 60px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -439,7 +400,6 @@
   .form__button {
     width: 283px;
     margin-top: 0;
-    //margin-bottom: 72px;
     min-height: 52px;
     float: left;
     font-size: 20px;
@@ -473,7 +433,6 @@
       width: 570px;
       margin: 0;
       margin-bottom: 70px;
-      //min-height: 196px;
       padding: 0;
     }
 
@@ -517,13 +476,11 @@
   }
 
   .form__fieldset--add .form__fields-list {
-    //min-height: 50px;
     padding: 0;
   }
 
   .form__fieldset--add .form__field {
     width: 245px;
-    //margin-right: 70px;
   }
 
   .form__button {
